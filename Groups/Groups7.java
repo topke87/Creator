@@ -20,11 +20,12 @@ import java.awt.Component;
 
 
 
-public class Groups extends JFrame {
+public class Groups7 extends JFrame {
 
 	private JPanel contentPane;
 	
 	private String teamA1=addTeams.teamA1; private String teamA2=addTeams.teamA2; private String teamA3=addTeams.teamA3;
+	private String teamA4=addTeams.teamA4; 
 	private String teamB1=addTeams.teamB1; private String teamB2=addTeams.teamB2; private String teamB3=addTeams.teamB3;
 	
 
@@ -35,7 +36,7 @@ public class Groups extends JFrame {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
 				try {
-					Groups frame = new Groups();
+					Groups7 frame = new Groups7();
 					frame.setVisible(true);
 				} catch (Exception e) {
 					e.printStackTrace();
@@ -47,7 +48,7 @@ public class Groups extends JFrame {
 	/**
 	 * Create the frame.
 	 */
-	public Groups() {
+	public Groups7() {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 1042, 683);
 		contentPane = new JPanel();
@@ -110,10 +111,11 @@ public class Groups extends JFrame {
 	        Object[][] data= {{"1",teamA1,null,null,null,null,null,null,null,null},
 	        		          {"2",teamA2,null,null,null,null,null,null,null,null},
 	        		          {"3",teamA3,null,null,null,null,null,null,null,null},
+	        		          {"4",teamA4,null,null,null,null,null,null,null,null},
 	        };
 	        JTable tableA=new JTable(data,column);
 	        JScrollPane scrollPane = new JScrollPane(tableA);
-	        scrollPane.setSize(484, 75);
+	        scrollPane.setSize(484, 91);
 	        scrollPane.setLocation(12, 124);
 	        tableA.setRowSelectionAllowed(false);
 	        tableA.setEnabled(false);
@@ -176,6 +178,10 @@ public class Groups extends JFrame {
 	        tableB.getColumnModel().getColumn(9).setPreferredWidth(30);
 	        tableB.getColumnModel().getColumn(9).setCellRenderer(centerRenderer);
 	        contentPane.add(scrollPaneB);
+	        
+       
+		
+		
 		
 		
         		

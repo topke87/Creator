@@ -5,7 +5,6 @@ import javax.swing.JPanel;
 import javax.swing.JScrollPane;
 import javax.swing.JTable;
 import javax.swing.border.EmptyBorder;
-import javax.swing.table.DefaultTableCellRenderer;
 import javax.swing.JLabel;
 import java.awt.Font;
 import javax.swing.SwingConstants;
@@ -20,13 +19,14 @@ import java.awt.Component;
 
 
 
-public class Groups extends JFrame {
+public class Groups9 extends JFrame {
 
 	private JPanel contentPane;
 	
 	private String teamA1=addTeams.teamA1; private String teamA2=addTeams.teamA2; private String teamA3=addTeams.teamA3;
+	private String teamA4=addTeams.teamA4; private String teamA5=addTeams.teamA5; 
 	private String teamB1=addTeams.teamB1; private String teamB2=addTeams.teamB2; private String teamB3=addTeams.teamB3;
-	
+	private String teamB4=addTeams.teamB4; 
 
 	/**
 	 * Launch the application.
@@ -35,7 +35,7 @@ public class Groups extends JFrame {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
 				try {
-					Groups frame = new Groups();
+					Groups9 frame = new Groups9();
 					frame.setVisible(true);
 				} catch (Exception e) {
 					e.printStackTrace();
@@ -47,7 +47,7 @@ public class Groups extends JFrame {
 	/**
 	 * Create the frame.
 	 */
-	public Groups() {
+	public Groups9() {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 1042, 683);
 		contentPane = new JPanel();
@@ -110,73 +110,55 @@ public class Groups extends JFrame {
 	        Object[][] data= {{"1",teamA1,null,null,null,null,null,null,null,null},
 	        		          {"2",teamA2,null,null,null,null,null,null,null,null},
 	        		          {"3",teamA3,null,null,null,null,null,null,null,null},
+	        		          {"4",teamA4,null,null,null,null,null,null,null,null},
+	        		          {"5",teamA5,null,null,null,null,null,null,null,null},
 	        };
 	        JTable tableA=new JTable(data,column);
 	        JScrollPane scrollPane = new JScrollPane(tableA);
-	        scrollPane.setSize(484, 75);
+	        scrollPane.setSize(484, 107);
 	        scrollPane.setLocation(12, 124);
 	        tableA.setRowSelectionAllowed(false);
 	        tableA.setEnabled(false);
 	        tableA.getTableHeader().setReorderingAllowed(false);
 	        tableA.getTableHeader().setResizingAllowed(false);
-	        DefaultTableCellRenderer centerRenderer = new DefaultTableCellRenderer();
-	        centerRenderer.setHorizontalAlignment(JLabel.CENTER);
-	        tableA.setDefaultRenderer(String.class, centerRenderer);
 	        tableA.getColumnModel().getColumn(0).setPreferredWidth(25);
-	        tableA.getColumnModel().getColumn(0).setCellRenderer(centerRenderer);
 	        tableA.getColumnModel().getColumn(1).setPreferredWidth(170);
 	        tableA.getColumnModel().getColumn(2).setPreferredWidth(30);
-	        tableA.getColumnModel().getColumn(2).setCellRenderer(centerRenderer);
 	        tableA.getColumnModel().getColumn(3).setPreferredWidth(30);
-	        tableA.getColumnModel().getColumn(3).setCellRenderer(centerRenderer);
 	        tableA.getColumnModel().getColumn(4).setPreferredWidth(30);
-	        tableA.getColumnModel().getColumn(4).setCellRenderer(centerRenderer);
 	        tableA.getColumnModel().getColumn(5).setPreferredWidth(30);
-	        tableA.getColumnModel().getColumn(5).setCellRenderer(centerRenderer);
 	        tableA.getColumnModel().getColumn(6).setPreferredWidth(30);
-	        tableA.getColumnModel().getColumn(6).setCellRenderer(centerRenderer);
 	        tableA.getColumnModel().getColumn(7).setPreferredWidth(30);
-	        tableA.getColumnModel().getColumn(7).setCellRenderer(centerRenderer);
 	        tableA.getColumnModel().getColumn(8).setPreferredWidth(30);
-	        tableA.getColumnModel().getColumn(8).setCellRenderer(centerRenderer);
 	        tableA.getColumnModel().getColumn(9).setPreferredWidth(30);
-	        tableA.getColumnModel().getColumn(9).setCellRenderer(centerRenderer);
 	        contentPane.add(scrollPane);
 	        
 	        String[]column2= {"#", "Team", "P", "W", "D", "L", "GF", "GA", "GD", "PTS"};
 	        Object[][] data2= {{"1",teamB1,null,null,null,null,null,null,null,null},
 	        		           {"2",teamB2,null,null,null,null,null,null,null,null},
 	        		           {"3",teamB3,null,null,null,null,null,null,null,null},
+	        		           {"4",teamB4,null,null,null,null,null,null,null,null},
 	        };
 	        JTable tableB=new JTable(data2,column2);
 	        JScrollPane scrollPaneB = new JScrollPane(tableB);
-	        scrollPaneB.setBounds(526, 124, 484, 75);
+	        scrollPaneB.setBounds(526, 124, 484, 91);
 	        tableB.setRowSelectionAllowed(false);
 	        tableB.setEnabled(false);
 	        tableB.getTableHeader().setReorderingAllowed(false);
 	        tableB.getTableHeader().setResizingAllowed(false);
-	        tableB.setDefaultRenderer(String.class, centerRenderer);
 	        tableB.getColumnModel().getColumn(0).setPreferredWidth(25);
-	        tableB.getColumnModel().getColumn(0).setCellRenderer(centerRenderer);
 	        tableB.getColumnModel().getColumn(1).setPreferredWidth(170);
 	        tableB.getColumnModel().getColumn(2).setPreferredWidth(30);
-	        tableB.getColumnModel().getColumn(2).setCellRenderer(centerRenderer);
 	        tableB.getColumnModel().getColumn(3).setPreferredWidth(30);
-	        tableB.getColumnModel().getColumn(3).setCellRenderer(centerRenderer);
 	        tableB.getColumnModel().getColumn(4).setPreferredWidth(30);
-	        tableB.getColumnModel().getColumn(4).setCellRenderer(centerRenderer);
 	        tableB.getColumnModel().getColumn(5).setPreferredWidth(30);
-	        tableB.getColumnModel().getColumn(5).setCellRenderer(centerRenderer);
 	        tableB.getColumnModel().getColumn(6).setPreferredWidth(30);
-	        tableB.getColumnModel().getColumn(6).setCellRenderer(centerRenderer);
 	        tableB.getColumnModel().getColumn(7).setPreferredWidth(30);
-	        tableB.getColumnModel().getColumn(7).setCellRenderer(centerRenderer);
 	        tableB.getColumnModel().getColumn(8).setPreferredWidth(30);
-	        tableB.getColumnModel().getColumn(8).setCellRenderer(centerRenderer);
 	        tableB.getColumnModel().getColumn(9).setPreferredWidth(30);
-	        tableB.getColumnModel().getColumn(9).setCellRenderer(centerRenderer);
 	        contentPane.add(scrollPaneB);
-		
+	        
+        
 		
         		
 	}
