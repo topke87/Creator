@@ -1,4 +1,4 @@
-
+//For sorting Teams in Table A in Groups.java
 public class TabelaA implements Comparable<TabelaA> {
 	String teamName;
 	int played;
