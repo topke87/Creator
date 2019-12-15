@@ -396,7 +396,7 @@ public class addTeams extends JFrame {
 		lblTeamA2.setFont(new Font("Times New Roman", Font.PLAIN, 13));
 		lblTeamA2.setBounds(344, 140, 180, 25);
 		lblTeamA2.setVisible(false);
-        contentPane.add(lblTeamA2);
+       	    	contentPane.add(lblTeamA2);
 		
 		JLabel lblTeamA3 = new JLabel("New label");
 		lblTeamA3.setFont(new Font("Times New Roman", Font.PLAIN, 13));
