@@ -1,5 +1,7 @@
 import java.util.Comparator;
 
+//for sorting tables by points
+
 public class SortByPts implements Comparator <TableSort> {
 
 	@Override
