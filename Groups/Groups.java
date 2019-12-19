@@ -139,61 +139,31 @@ public class Groups extends JFrame {
 	public Groups() {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setResizable(false);
-		setBounds(100, 100, 1128, 749);
+		setBounds(100, 100, 1128, 708);
 		contentPane = new JPanel();
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
-		
-		//IME TURNIRA----------------------------------------------------------------------------------------------------------------
-				JLabel lblTourName = new JLabel();
-				lblTourName.setBounds(407, 11, 180, 25);
-				lblTourName.setText(Creator.tourName.getText());
-				lblTourName.setHorizontalAlignment(SwingConstants.CENTER);
-				lblTourName.setFont(new Font("Times New Roman", Font.BOLD, 18));
-				contentPane.add(lblTourName);
-				
-				JLabel lblTourPlace = new JLabel();
-				lblTourPlace.setBounds(196, 36, 180, 25);
-				lblTourPlace.setText(Creator.tourPlace.getText());
-				lblTourPlace.setFont(new Font("Times New Roman", Font.BOLD, 15));
-				contentPane.add(lblTourPlace);
-				
-				JLabel label_2 = new JLabel("Place of tournament:");
-				label_2.setBounds(26, 36, 180, 25);
-				label_2.setHorizontalAlignment(SwingConstants.CENTER);
-				label_2.setFont(new Font("Times New Roman", Font.BOLD, 15));
-				contentPane.add(label_2);
-				
-				JLabel label_3 = new JLabel("Date:");
-				label_3.setBounds(692, 36, 48, 25);
-				label_3.setFont(new Font("Times New Roman", Font.BOLD, 15));
-				contentPane.add(label_3);
-				
-				JLabel lblTourDate = new JLabel();
-				lblTourDate.setBounds(740, 36, 180, 25);
-				lblTourDate.setText(Creator.dateTour);
-				lblTourDate.setFont(new Font("Times New Roman", Font.BOLD, 15));
-				contentPane.add(lblTourDate);
+		setTitle("Name of tournament: "+Creator.tourName.getText()+" "+" "+" "+" "+" "+" "+"Place of tournament: "+Creator.tourPlace.getText()+" "+" "+" "+" "+" "+" "+"Date: "+Creator.dateTour);
 				
 				JLabel lblGroupA = new JLabel("Group A");
-				lblGroupA.setBounds(141, 88, 180, 25);
+				lblGroupA.setBounds(141, 60, 180, 25);
 				lblGroupA.setHorizontalAlignment(SwingConstants.CENTER);
 				lblGroupA.setFont(new Font("Times New Roman", Font.BOLD, 15));
 				contentPane.add(lblGroupA);
 				
 				JLabel lblGroupB = new JLabel("Group B");
-				lblGroupB.setBounds(658, 88, 180, 25);
+				lblGroupB.setBounds(658, 60, 180, 25);
 				lblGroupB.setHorizontalAlignment(SwingConstants.CENTER);
 				lblGroupB.setFont(new Font("Times New Roman", Font.BOLD, 15));
 				contentPane.add(lblGroupB);
 				
 				JLabel lblNewLabel = new JLabel("Fixtures");
-				lblNewLabel.setBounds(26, 213, 352, 25);
+				lblNewLabel.setBounds(26, 185, 352, 25);
 				lblNewLabel.setHorizontalAlignment(SwingConstants.CENTER);
 				contentPane.add(lblNewLabel);
 				
 				JLabel label = new JLabel("Fixtures");
-				label.setBounds(569, 213, 352, 25);
+				label.setBounds(569, 185, 352, 25);
 				label.setHorizontalAlignment(SwingConstants.CENTER);
 				contentPane.add(label);
 				
@@ -206,19 +176,19 @@ public class Groups extends JFrame {
 		
 		//IMENA TIMOVA-----------------------------------------------------------------------------------------------------------
 			    
-			    lblGrpTeamA1.setBounds(36, 145, 125, 14);			lblGrpTeamA2.setBounds(36, 163, 125, 14);
+			    lblGrpTeamA1.setBounds(36, 117, 125, 14);			lblGrpTeamA2.setBounds(36, 135, 125, 14);
 			    lblGrpTeamA1.setText(addTeams.teamA1);				lblGrpTeamA2.setText(addTeams.teamA2);
 			    contentPane.add(lblGrpTeamA1);						contentPane.add(lblGrpTeamA2);
 			    
-			    lblGrpTeamA3.setBounds(36, 181, 125, 14);
+			    lblGrpTeamA3.setBounds(36, 153, 125, 14);
 			    lblGrpTeamA3.setText(addTeams.teamA3);
 			    contentPane.add(lblGrpTeamA3);
 		
-			    lblGrpTeamB1.setBounds(595, 145, 125, 14);			lblGrpTeamB2.setBounds(595, 163, 125, 14);
+			    lblGrpTeamB1.setBounds(595, 117, 125, 14);			lblGrpTeamB2.setBounds(595, 135, 125, 14);
 			    lblGrpTeamB1.setText(addTeams.teamB1);				lblGrpTeamB2.setText(addTeams.teamB2);
 			    contentPane.add(lblGrpTeamB1);						contentPane.add(lblGrpTeamB2);
 			    
-			    lblGrpTeamB3.setBounds(595, 181, 125, 14);
+			    lblGrpTeamB3.setBounds(595, 153, 125, 14);
 			    lblGrpTeamB3.setText(addTeams.teamB3);
 			    contentPane.add(lblGrpTeamB3);
 		
@@ -226,28 +196,28 @@ public class Groups extends JFrame {
 			    JLabel lblPlayedB1 = new JLabel("P");						JLabel lblWinsB1 = new JLabel("W");
 			    lblPlayedB1.setHorizontalAlignment(SwingConstants.CENTER);	lblWinsB1.setHorizontalAlignment(SwingConstants.CENTER);
 			    lblPlayedB1.setFont(new Font("Tahoma", Font.BOLD, 12));		lblWinsB1.setFont(new Font("Tahoma", Font.BOLD, 12));
-			    lblPlayedB1.setBounds(731, 145, 29, 14);					lblWinsB1.setBounds(764, 145, 29, 14);
+			    lblPlayedB1.setBounds(731, 117, 29, 14);					lblWinsB1.setBounds(764, 117, 29, 14);
 			    lblPlayedB1.setText(pB1);                                   lblWinsB1.setText(wB1);
 			    contentPane.add(lblPlayedB1);								contentPane.add(lblWinsB1);
 		
 			    JLabel lblDrawsB1 = new JLabel("D");						JLabel lblLostB1 = new JLabel("L");
 			    lblDrawsB1.setHorizontalAlignment(SwingConstants.CENTER);	lblLostB1.setHorizontalAlignment(SwingConstants.CENTER);
 			    lblDrawsB1.setFont(new Font("Tahoma", Font.BOLD, 12));  	lblLostB1.setFont(new Font("Tahoma", Font.BOLD, 12));
-			    lblDrawsB1.setBounds(797, 145, 29, 14);						lblLostB1.setBounds(830, 145, 29, 14);
+			    lblDrawsB1.setBounds(797, 117, 29, 14);						lblLostB1.setBounds(830, 117, 29, 14);
 			    lblDrawsB1.setText(dB1); 									lblLostB1.setText(lB1);
 			    contentPane.add(lblDrawsB1);								contentPane.add(lblLostB1);
 		
 			    JLabel lblGFB1 = new JLabel("GF");							JLabel lblGAB1 = new JLabel("GA");							
 			    lblGFB1.setHorizontalAlignment(SwingConstants.CENTER);		lblGAB1.setHorizontalAlignment(SwingConstants.CENTER);		
 			    lblGFB1.setFont(new Font("Tahoma", Font.BOLD, 12));			lblGAB1.setFont(new Font("Tahoma", Font.BOLD, 12));			
-			    lblGFB1.setBounds(863, 145, 29, 14);						lblGAB1.setBounds(896, 145, 29, 14);
+			    lblGFB1.setBounds(863, 117, 29, 14);						lblGAB1.setBounds(896, 117, 29, 14);
 			    lblGFB1.setText(gfB1); 										lblGAB1.setText(gaB1);
 			    contentPane.add(lblGFB1);									contentPane.add(lblGAB1);									
 		
 			    JLabel lblGDB1 = new JLabel("GD");							JLabel lblPtsB1 = new JLabel("PTS");
 			    lblGDB1.setHorizontalAlignment(SwingConstants.CENTER);		lblPtsB1.setHorizontalAlignment(SwingConstants.CENTER);
 			    lblGDB1.setFont(new Font("Tahoma", Font.BOLD, 12));			lblPtsB1.setFont(new Font("Tahoma", Font.BOLD, 12));
-			    lblGDB1.setBounds(929, 145, 29, 14);						lblPtsB1.setBounds(962, 145, 29, 14);
+			    lblGDB1.setBounds(929, 117, 29, 14);						lblPtsB1.setBounds(962, 117, 29, 14);
 			    lblGDB1.setText(gdB1); 										lblPtsB1.setText(ptsB1);
 			    contentPane.add(lblGDB1);									contentPane.add(lblPtsB1);
 		
@@ -255,28 +225,28 @@ public class Groups extends JFrame {
 			    JLabel lblPlayedB2 = new JLabel("P");							JLabel lblWinsB2 = new JLabel("W");
 			    lblPlayedB2.setHorizontalAlignment(SwingConstants.CENTER);		lblWinsB2.setHorizontalAlignment(SwingConstants.CENTER);
 			    lblPlayedB2.setFont(new Font("Tahoma", Font.BOLD, 12));			lblWinsB2.setFont(new Font("Tahoma", Font.BOLD, 12));
-			    lblPlayedB2.setBounds(731, 163, 29, 14);						lblWinsB2.setBounds(764, 163, 29, 14);
+			    lblPlayedB2.setBounds(731, 135, 29, 14);						lblWinsB2.setBounds(764, 135, 29, 14);
 			    lblPlayedB2.setText(pB2);                                   	lblWinsB2.setText(wB2);
 			    contentPane.add(lblPlayedB2);									contentPane.add(lblWinsB2);
 		
 			    JLabel lblDrawsB2 = new JLabel("D");							JLabel lblLostB2 = new JLabel("L");
 			    lblDrawsB2.setHorizontalAlignment(SwingConstants.CENTER);		lblLostB2.setHorizontalAlignment(SwingConstants.CENTER);
 			    lblDrawsB2.setFont(new Font("Tahoma", Font.BOLD, 12));			lblLostB2.setFont(new Font("Tahoma", Font.BOLD, 12));
-			    lblDrawsB2.setBounds(797, 163, 29, 14);							lblLostB2.setBounds(830, 163, 29, 14);
+			    lblDrawsB2.setBounds(797, 135, 29, 14);							lblLostB2.setBounds(830, 135, 29, 14);
 			    lblDrawsB2.setText(dB2); 										lblLostB2.setText(lB2);
 			    contentPane.add(lblDrawsB2);									contentPane.add(lblLostB2);
 		
 			    JLabel lblGFB2 = new JLabel("GF");								JLabel lblGAB2 = new JLabel("GA");
 			    lblGFB2.setHorizontalAlignment(SwingConstants.CENTER);			lblGAB2.setHorizontalAlignment(SwingConstants.CENTER);
 			    lblGFB2.setFont(new Font("Tahoma", Font.BOLD, 12));				lblGAB2.setFont(new Font("Tahoma", Font.BOLD, 12));
-			    lblGFB2.setBounds(863, 163, 29, 14);							lblGAB2.setBounds(896, 163, 29, 14);
+			    lblGFB2.setBounds(863, 135, 29, 14);							lblGAB2.setBounds(896, 135, 29, 14);
 			    lblGFB2.setText(gfB2); 											lblGAB2.setText(gaB2);
 			    contentPane.add(lblGFB2);										contentPane.add(lblGAB2);
 		
 			    JLabel lblGDB2 = new JLabel("GD");								JLabel lblPtsB2 = new JLabel("PTS");
 			    lblGDB2.setHorizontalAlignment(SwingConstants.CENTER);			lblPtsB2.setHorizontalAlignment(SwingConstants.CENTER);
 			    lblGDB2.setFont(new Font("Tahoma", Font.BOLD, 12));				lblPtsB2.setFont(new Font("Tahoma", Font.BOLD, 12));
-			    lblGDB2.setBounds(929, 163, 29, 14);							lblPtsB2.setBounds(962, 163, 29, 14);
+			    lblGDB2.setBounds(929, 135, 29, 14);							lblPtsB2.setBounds(962, 135, 29, 14);
 			    lblGDB2.setText(gdB2); 											lblPtsB2.setText(ptsB2);
 			    contentPane.add(lblGDB2);										contentPane.add(lblPtsB2);
 		
@@ -284,28 +254,28 @@ public class Groups extends JFrame {
 			    JLabel lblPlayedB3 = new JLabel("P");						JLabel lblWinsB3 = new JLabel("W");
 			    lblPlayedB3.setHorizontalAlignment(SwingConstants.CENTER);	lblWinsB3.setHorizontalAlignment(SwingConstants.CENTER);
 			    lblPlayedB3.setFont(new Font("Tahoma", Font.BOLD, 12));		lblWinsB3.setFont(new Font("Tahoma", Font.BOLD, 12));
-			    lblPlayedB3.setBounds(731, 181, 29, 14);					lblWinsB3.setBounds(764, 181, 29, 14);
+			    lblPlayedB3.setBounds(731, 153, 29, 14);					lblWinsB3.setBounds(764, 153, 29, 14);
 			    lblPlayedB3.setText(pB3);                                   lblWinsB3.setText(wB3);
 			    contentPane.add(lblPlayedB3);								contentPane.add(lblWinsB3);
 		
 			    JLabel lblDrawsB3 = new JLabel("D");						JLabel lblLostB3 = new JLabel("L");
 			    lblDrawsB3.setHorizontalAlignment(SwingConstants.CENTER);	lblLostB3.setHorizontalAlignment(SwingConstants.CENTER);
 			    lblDrawsB3.setFont(new Font("Tahoma", Font.BOLD, 12));		lblLostB3.setFont(new Font("Tahoma", Font.BOLD, 12));
-			    lblDrawsB3.setBounds(797, 181, 29, 14);						lblLostB3.setBounds(830, 181, 29, 14);
+			    lblDrawsB3.setBounds(797, 153, 29, 14);						lblLostB3.setBounds(830, 153, 29, 14);
 			    lblDrawsB3.setText(dB3); 									lblLostB3.setText(lB3);
 			    contentPane.add(lblDrawsB3);								contentPane.add(lblLostB3);
 		
 			    JLabel lblGFB3 = new JLabel("GF");							JLabel lblGAB3 = new JLabel("GA");
 			    lblGFB3.setHorizontalAlignment(SwingConstants.CENTER);		lblGAB3.setHorizontalAlignment(SwingConstants.CENTER);	
 			    lblGFB3.setFont(new Font("Tahoma", Font.BOLD, 12));			lblGAB3.setFont(new Font("Tahoma", Font.BOLD, 12));
-			    lblGFB3.setBounds(863, 181, 29, 14);						lblGAB3.setBounds(896, 181, 29, 14);
+			    lblGFB3.setBounds(863, 153, 29, 14);						lblGAB3.setBounds(896, 153, 29, 14);
 			    lblGFB3.setText(gfB3); 										lblGAB3.setText(gaB3);
 			    contentPane.add(lblGFB3);									contentPane.add(lblGAB3);
 		
 			    JLabel lblGDB3 = new JLabel("GD");							JLabel lblPtsB3 = new JLabel("PTS");
 			    lblGDB3.setHorizontalAlignment(SwingConstants.CENTER);		lblPtsB3.setHorizontalAlignment(SwingConstants.CENTER);
 			    lblGDB3.setFont(new Font("Tahoma", Font.BOLD, 12));			lblPtsB3.setFont(new Font("Tahoma", Font.BOLD, 12));
-			    lblGDB3.setBounds(929, 181, 29, 14);						lblPtsB3.setBounds(962, 181, 29, 14);
+			    lblGDB3.setBounds(929, 153, 29, 14);						lblPtsB3.setBounds(962, 153, 29, 14);
 			    lblGDB3.setText(gdB3); 										lblPtsB3.setText(ptsB3);
 			    contentPane.add(lblGDB3);									contentPane.add(lblPtsB3);
 		
@@ -313,28 +283,28 @@ public class Groups extends JFrame {
 			    JLabel lblPlayedA3 = new JLabel("P");							JLabel lblWinsA3 = new JLabel("W");
 			    lblPlayedA3.setHorizontalAlignment(SwingConstants.CENTER);		lblWinsA3.setHorizontalAlignment(SwingConstants.CENTER);
 			    lblPlayedA3.setFont(new Font("Tahoma", Font.BOLD, 12));			lblWinsA3.setFont(new Font("Tahoma", Font.BOLD, 12));
-			    lblPlayedA3.setBounds(171, 181, 29, 14);						lblWinsA3.setBounds(204, 181, 29, 14);
+			    lblPlayedA3.setBounds(171, 153, 29, 14);						lblWinsA3.setBounds(204, 153, 29, 14);
 			    lblPlayedA3.setText(pA3); 										lblWinsA3.setText(wA3);
 			    contentPane.add(lblPlayedA3);									contentPane.add(lblWinsA3);
 		
 			    JLabel lblDrawsA3 = new JLabel("D");							JLabel lblLostA3 = new JLabel("L");
 			    lblDrawsA3.setHorizontalAlignment(SwingConstants.CENTER);		lblLostA3.setHorizontalAlignment(SwingConstants.CENTER);
 			    lblDrawsA3.setFont(new Font("Tahoma", Font.BOLD, 12));			lblLostA3.setFont(new Font("Tahoma", Font.BOLD, 12));
-			    lblDrawsA3.setBounds(237, 181, 29, 14);							lblLostA3.setBounds(270, 181, 29, 14);
+			    lblDrawsA3.setBounds(237, 153, 29, 14);							lblLostA3.setBounds(270, 153, 29, 14);
 			    lblDrawsA3.setText(dA3); 										lblLostA3.setText(lA3);
 			    contentPane.add(lblDrawsA3);									contentPane.add(lblLostA3);
 		
 			    JLabel lblGFA3 = new JLabel("GF");								JLabel lblGAA3 = new JLabel("GA");
 			    lblGFA3.setHorizontalAlignment(SwingConstants.CENTER);			lblGAA3.setHorizontalAlignment(SwingConstants.CENTER);
 			    lblGFA3.setFont(new Font("Tahoma", Font.BOLD, 12));				lblGAA3.setFont(new Font("Tahoma", Font.BOLD, 12));
-			    lblGFA3.setBounds(303, 181, 29, 14);							lblGAA3.setBounds(336, 181, 29, 14);
+			    lblGFA3.setBounds(303, 153, 29, 14);							lblGAA3.setBounds(336, 153, 29, 14);
 			    lblGFA3.setText(gfA3); 											lblGAA3.setText(gaA3);
 			    contentPane.add(lblGFA3);										contentPane.add(lblGAA3);
 		
 			    JLabel lblGDA3 = new JLabel("GD");								JLabel lblPtsA3 = new JLabel("PTS");
 			    lblGDA3.setHorizontalAlignment(SwingConstants.CENTER);			lblPtsA3.setHorizontalAlignment(SwingConstants.CENTER);
 			    lblGDA3.setFont(new Font("Tahoma", Font.BOLD, 12));				lblPtsA3.setFont(new Font("Tahoma", Font.BOLD, 12));
-			    lblGDA3.setBounds(369, 181, 29, 14);							lblPtsA3.setBounds(402, 181, 29, 14);
+			    lblGDA3.setBounds(369, 153, 29, 14);							lblPtsA3.setBounds(402, 153, 29, 14);
 			    lblGDA3.setText(gdA3); 											lblPtsA3.setText(ptsA3);
 			    contentPane.add(lblGDA3);										contentPane.add(lblPtsA3);
 		
@@ -342,28 +312,28 @@ public class Groups extends JFrame {
 			    JLabel lblPlayedA2 = new JLabel("P");							JLabel lblWinsA2 = new JLabel("W");
 			    lblPlayedA2.setHorizontalAlignment(SwingConstants.CENTER);		lblWinsA2.setHorizontalAlignment(SwingConstants.CENTER);
 			    lblPlayedA2.setFont(new Font("Tahoma", Font.BOLD, 12));			lblWinsA2.setFont(new Font("Tahoma", Font.BOLD, 12));
-			    lblPlayedA2.setBounds(171, 163, 29, 14);						lblWinsA2.setBounds(204, 163, 29, 14);
+			    lblPlayedA2.setBounds(171, 135, 29, 14);						lblWinsA2.setBounds(204, 135, 29, 14);
 			    lblPlayedA2.setText(pA2); 										lblWinsA2.setText(wA2);
 			    contentPane.add(lblPlayedA2);									contentPane.add(lblWinsA2);
 		
 			    JLabel lblDrawsA2 = new JLabel("D");							JLabel lblLostA2 = new JLabel("L");
 			    lblDrawsA2.setHorizontalAlignment(SwingConstants.CENTER);		lblLostA2.setHorizontalAlignment(SwingConstants.CENTER);
 			    lblDrawsA2.setFont(new Font("Tahoma", Font.BOLD, 12));			lblLostA2.setFont(new Font("Tahoma", Font.BOLD, 12));
-			    lblDrawsA2.setBounds(237, 163, 29, 14);							lblLostA2.setBounds(270, 163, 29, 14);
+			    lblDrawsA2.setBounds(237, 135, 29, 14);							lblLostA2.setBounds(270, 135, 29, 14);
 			    lblDrawsA2.setText(dA2); 										lblLostA2.setText(lA2);
 			    contentPane.add(lblDrawsA2);									contentPane.add(lblLostA2);
 		
 			    JLabel lblGFA2 = new JLabel("GF");								JLabel lblGAA2 = new JLabel("GA");
 			    lblGFA2.setHorizontalAlignment(SwingConstants.CENTER);			lblGAA2.setHorizontalAlignment(SwingConstants.CENTER);
 			    lblGFA2.setFont(new Font("Tahoma", Font.BOLD, 12));				lblGAA2.setFont(new Font("Tahoma", Font.BOLD, 12));
-			    lblGFA2.setBounds(303, 163, 29, 14);							lblGAA2.setBounds(336, 163, 29, 14);
+			    lblGFA2.setBounds(303, 135, 29, 14);							lblGAA2.setBounds(336, 135, 29, 14);
 			    lblGFA2.setText(gfA2); 											lblGAA2.setText(gaA2);
 			    contentPane.add(lblGFA2);										contentPane.add(lblGAA2);		
 		
 			    JLabel lblGDA2 = new JLabel("GD");								JLabel lblPtsA2 = new JLabel("PTS");
 			    lblGDA2.setHorizontalAlignment(SwingConstants.CENTER);			lblPtsA2.setHorizontalAlignment(SwingConstants.CENTER);
 			    lblGDA2.setFont(new Font("Tahoma", Font.BOLD, 12));				lblPtsA2.setFont(new Font("Tahoma", Font.BOLD, 12));
-			    lblGDA2.setBounds(369, 163, 29, 14);							lblPtsA2.setBounds(402, 163, 29, 14);
+			    lblGDA2.setBounds(369, 135, 29, 14);							lblPtsA2.setBounds(402, 135, 29, 14);
 			    lblGDA2.setText(gdA2); 											lblPtsA2.setText(ptsA2);
 			    contentPane.add(lblGDA2);										contentPane.add(lblPtsA2);
 		
@@ -371,28 +341,28 @@ public class Groups extends JFrame {
 			    JLabel lblPlayedA1 = new JLabel("P");							JLabel lblWinsA1 = new JLabel("W");
 			    lblPlayedA1.setHorizontalAlignment(SwingConstants.CENTER);		lblWinsA1.setHorizontalAlignment(SwingConstants.CENTER);
 			    lblPlayedA1.setFont(new Font("Tahoma", Font.BOLD, 12));			lblWinsA1.setFont(new Font("Tahoma", Font.BOLD, 12));
-			    lblPlayedA1.setBounds(171, 145, 29, 14);						lblWinsA1.setBounds(204, 145, 29, 14);
+			    lblPlayedA1.setBounds(171, 117, 29, 14);						lblWinsA1.setBounds(204, 117, 29, 14);
 			    lblPlayedA1.setText(pA1); 										lblWinsA1.setText(wA1);
 			    contentPane.add(lblPlayedA1);									contentPane.add(lblWinsA1);
 		
 			    JLabel lblDrawsA1 = new JLabel("D");							JLabel lblLostA1 = new JLabel("L");
 			    lblDrawsA1.setHorizontalAlignment(SwingConstants.CENTER);		lblLostA1.setHorizontalAlignment(SwingConstants.CENTER);
 			    lblDrawsA1.setFont(new Font("Tahoma", Font.BOLD, 12));			lblLostA1.setFont(new Font("Tahoma", Font.BOLD, 12));
-			    lblDrawsA1.setBounds(237, 145, 29, 14);							lblLostA1.setBounds(270, 145, 29, 14);
+			    lblDrawsA1.setBounds(237, 117, 29, 14);							lblLostA1.setBounds(270, 117, 29, 14);
 			    lblDrawsA1.setText(dA1); 										lblLostA1.setText(lA1);
 			    contentPane.add(lblDrawsA1);									contentPane.add(lblLostA1);
 		
 			    JLabel lblGFA1 = new JLabel("GF");								JLabel lblGAA1 = new JLabel("GA");
 			    lblGFA1.setHorizontalAlignment(SwingConstants.CENTER);			lblGAA1.setHorizontalAlignment(SwingConstants.CENTER);
 			    lblGFA1.setFont(new Font("Tahoma", Font.BOLD, 12));				lblGAA1.setFont(new Font("Tahoma", Font.BOLD, 12));
-			    lblGFA1.setBounds(303, 145, 29, 14);							lblGAA1.setBounds(336, 145, 29, 14);
+			    lblGFA1.setBounds(303, 117, 29, 14);							lblGAA1.setBounds(336, 117, 29, 14);
 			    lblGFA1.setText(gfA1); 											lblGAA1.setText(gaA1);
 			    contentPane.add(lblGFA1);										contentPane.add(lblGAA1);
 		
 			    JLabel lblGDA1 = new JLabel("GD");								JLabel lblPtsA1 = new JLabel("PTS");
 			    lblGDA1.setHorizontalAlignment(SwingConstants.CENTER);			lblPtsA1.setHorizontalAlignment(SwingConstants.CENTER);
 			    lblGDA1.setFont(new Font("Tahoma", Font.BOLD, 12));				lblPtsA1.setFont(new Font("Tahoma", Font.BOLD, 12));
-			    lblGDA1.setBounds(369, 145, 29, 14);							lblPtsA1.setBounds(402, 145, 29, 14);
+			    lblGDA1.setBounds(369, 117, 29, 14);							lblPtsA1.setBounds(402, 117, 29, 14);
 			    lblGDA1.setText(gdA1);  										lblPtsA1.setText(ptsA1);
 			    contentPane.add(lblGDA1);										contentPane.add(lblPtsA1);
 		
@@ -400,31 +370,31 @@ public class Groups extends JFrame {
 			    JLabel lblPositionA = new JLabel("#");								JLabel lblTeamA = new JLabel("Team");
 			    lblPositionA.setFont(new Font("Tahoma", Font.BOLD, 12));			lblTeamA.setHorizontalAlignment(SwingConstants.CENTER);
 			    lblPositionA.setHorizontalAlignment(SwingConstants.CENTER);			lblTeamA.setFont(new Font("Tahoma", Font.BOLD, 12));
-			    lblPositionA.setBounds(10, 117, 29, 14);							lblTeamA.setBounds(49, 117, 71, 14);
+			    lblPositionA.setBounds(10, 89, 29, 14);							lblTeamA.setBounds(49, 89, 71, 14);
 			    contentPane.add(lblPositionA);										contentPane.add(lblTeamA);
 		  
 			    JLabel lblPA = new JLabel("P");										JLabel lblWA = new JLabel("W");
 			    lblPA.setHorizontalAlignment(SwingConstants.CENTER);				lblWA.setHorizontalAlignment(SwingConstants.CENTER);
 			    lblPA.setFont(new Font("Tahoma", Font.BOLD, 12));					lblWA.setFont(new Font("Tahoma", Font.BOLD, 12));
-			    lblPA.setBounds(172, 117, 29, 14);									lblWA.setBounds(205, 117, 29, 14);
+			    lblPA.setBounds(172, 89, 29, 14);									lblWA.setBounds(205, 89, 29, 14);
 			    contentPane.add(lblPA);												contentPane.add(lblWA);
 		  
 			    JLabel lblDA = new JLabel("D");										JLabel lblLA = new JLabel("L");
 			    lblDA.setHorizontalAlignment(SwingConstants.CENTER);				lblLA.setHorizontalAlignment(SwingConstants.CENTER);
 			    lblDA.setFont(new Font("Tahoma", Font.BOLD, 12));					lblLA.setFont(new Font("Tahoma", Font.BOLD, 12));
-			    lblDA.setBounds(238, 117, 29, 14);									lblLA.setBounds(271, 117, 29, 14);
+			    lblDA.setBounds(238, 89, 29, 14);									lblLA.setBounds(271, 89, 29, 14);
 			    contentPane.add(lblDA);												contentPane.add(lblLA);
 		  
 			    JLabel lblGfA = new JLabel("GF");									JLabel lblGaA = new JLabel("GA");
 			    lblGfA.setHorizontalAlignment(SwingConstants.CENTER);				lblGaA.setHorizontalAlignment(SwingConstants.CENTER);
 			    lblGfA.setFont(new Font("Tahoma", Font.BOLD, 12));					lblGaA.setFont(new Font("Tahoma", Font.BOLD, 12));
-			    lblGfA.setBounds(304, 117, 29, 14);									lblGaA.setBounds(337, 117, 29, 14);
+			    lblGfA.setBounds(304, 89, 29, 14);									lblGaA.setBounds(337, 89, 29, 14);
 			    contentPane.add(lblGfA);											contentPane.add(lblGaA);
 		  
 			    JLabel lblGdA = new JLabel("GD");									JLabel lblPtsA = new JLabel("PTS");
 			    lblGdA.setHorizontalAlignment(SwingConstants.CENTER);				lblPtsA.setHorizontalAlignment(SwingConstants.CENTER);
 			    lblGdA.setFont(new Font("Tahoma", Font.BOLD, 12));					lblPtsA.setFont(new Font("Tahoma", Font.BOLD, 12));
-			    lblGdA.setBounds(370, 117, 29, 14);									lblPtsA.setBounds(403, 117, 29, 14);
+			    lblGdA.setBounds(370, 89, 29, 14);									lblPtsA.setBounds(403, 89, 29, 14);
 			    contentPane.add(lblGdA);											contentPane.add(lblPtsA);
 		  
 			    JLabel lblPosition1GrpA = new JLabel("1");							JLabel lblPosition2GrpA = new JLabel("2");
@@ -433,7 +403,7 @@ public class Groups extends JFrame {
 			    lblPosition1GrpA.setBackground(new Color(0, 204, 102));				lblPosition2GrpA.setForeground(Color.BLACK);
 			    lblPosition1GrpA.setFont(new Font("Tahoma", Font.BOLD, 12));		lblPosition2GrpA.setFont(new Font("Tahoma", Font.BOLD, 12));
 			    lblPosition1GrpA.setHorizontalAlignment(SwingConstants.LEFT);		lblPosition2GrpA.setBackground(new Color(0, 204, 102));
-			    lblPosition1GrpA.setBounds(20, 142, 412, 20);						lblPosition2GrpA.setBounds(20, 160, 412, 20);
+			    lblPosition1GrpA.setBounds(20, 114, 412, 20);						lblPosition2GrpA.setBounds(20, 132, 412, 20);
 			    contentPane.add(lblPosition1GrpA);									contentPane.add(lblPosition2GrpA);
 		  
 			    JLabel lblPosition3GrpA = new JLabel("3");
@@ -442,84 +412,84 @@ public class Groups extends JFrame {
 			    lblPosition3GrpA.setForeground(Color.BLACK);
 			    lblPosition3GrpA.setFont(new Font("Tahoma", Font.BOLD, 12));
 			    lblPosition3GrpA.setBackground(Color.WHITE);
-			    lblPosition3GrpA.setBounds(20, 178, 412, 20);
+			    lblPosition3GrpA.setBounds(20, 150, 412, 20);
 			    contentPane.add(lblPosition3GrpA);
 		  
 		  //REZULTATI A-------------------------------------------------------------------------------------------------------------------------------------
 			    JFormattedTextField resultA1G1 = new JFormattedTextField(formatter);  JFormattedTextField resultA1G2 = new JFormattedTextField(formatter);
 			    resultA1G1.setHorizontalAlignment(SwingConstants.CENTER);             resultA1G2.setHorizontalAlignment(SwingConstants.CENTER);
-			    resultA1G1.setBounds(172, 246, 23, 17);								  resultA1G2.setBounds(205, 274, 23, 17);
+			    resultA1G1.setBounds(172, 218, 23, 17);								  resultA1G2.setBounds(205, 246, 23, 17);
 			    contentPane.add(resultA1G1);										  contentPane.add(resultA1G2);
   	  	    	  	  
 			    JFormattedTextField resultA2G1 = new JFormattedTextField(formatter);  JFormattedTextField resultA2G2 = new JFormattedTextField(formatter);
 			    resultA2G1.setHorizontalAlignment(SwingConstants.CENTER);			  resultA2G2.setHorizontalAlignment(SwingConstants.CENTER);
-			    resultA2G1.setBounds(205, 246, 23, 17);								  resultA2G2.setBounds(172, 302, 23, 17);
+			    resultA2G1.setBounds(205, 218, 23, 17);								  resultA2G2.setBounds(172, 274, 23, 17);
 			    contentPane.add(resultA2G1);										  contentPane.add(resultA2G2);
 		  		  
 			    JFormattedTextField resultA3G1 = new JFormattedTextField(formatter);  JFormattedTextField resultA3G2 = new JFormattedTextField(formatter);
 			    resultA3G1.setHorizontalAlignment(SwingConstants.CENTER);			  resultA3G2.setHorizontalAlignment(SwingConstants.CENTER);
-			    resultA3G1.setBounds(172, 274, 23, 17);								  resultA3G2.setBounds(205, 302, 23, 17);
+			    resultA3G1.setBounds(172, 246, 23, 17);								  resultA3G2.setBounds(205, 274, 23, 17);
 			    contentPane.add(resultA3G1);										  contentPane.add(resultA3G2);
 		  
 			    JFormattedTextField resultA2G3 = new JFormattedTextField(formatter);  JFormattedTextField resultA2G4 = new JFormattedTextField(formatter);
 			    resultA2G3.setHorizontalAlignment(SwingConstants.CENTER);			  resultA2G4.setHorizontalAlignment(SwingConstants.CENTER);
-			    resultA2G3.setBounds(172, 330, 23, 17);								  resultA2G4.setBounds(205, 386, 23, 17);
+			    resultA2G3.setBounds(172, 302, 23, 17);								  resultA2G4.setBounds(205, 358, 23, 17);
 			    contentPane.add(resultA2G3);										  contentPane.add(resultA2G4);
 			    if(Creator.rdbtnNo.isSelected()) { resultA2G3.setVisible(false); }    if(Creator.rdbtnNo.isSelected()) { resultA2G4.setVisible(false);}
 			
 			    JFormattedTextField resultA3G3 = new JFormattedTextField(formatter);  JFormattedTextField resultA3G4 = new JFormattedTextField(formatter);
 			    resultA3G3.setHorizontalAlignment(SwingConstants.CENTER);			  resultA3G4.setHorizontalAlignment(SwingConstants.CENTER);
-			    resultA3G3.setBounds(205, 358, 23, 17);								  resultA3G4.setBounds(172, 386, 23, 17);
+			    resultA3G3.setBounds(205, 330, 23, 17);								  resultA3G4.setBounds(172, 358, 23, 17);
 			    contentPane.add(resultA3G3);										  contentPane.add(resultA3G4);
 			    if(Creator.rdbtnNo.isSelected()) { resultA3G3.setVisible(false); }    if(Creator.rdbtnNo.isSelected()) { resultA3G4.setVisible(false);}
 			  
 			    JFormattedTextField resultA1G3 = new JFormattedTextField(formatter);  JFormattedTextField resultA1G4 = new JFormattedTextField(formatter);
 			    resultA1G3.setHorizontalAlignment(SwingConstants.CENTER);			  resultA1G4.setHorizontalAlignment(SwingConstants.CENTER);
-			    resultA1G3.setBounds(205, 330, 23, 17);								  resultA1G4.setBounds(172, 358, 23, 17);
+			    resultA1G3.setBounds(205, 302, 23, 17);								  resultA1G4.setBounds(172, 330, 23, 17);
 			    contentPane.add(resultA1G3);										  contentPane.add(resultA1G4);
 			    if(Creator.rdbtnNo.isSelected()) { resultA1G3.setVisible(false); }    if(Creator.rdbtnNo.isSelected()) { resultA1G4.setVisible(false);}
 		  
 			    JLabel lblTeamA1G1 = new JLabel("New label"); 						JLabel lblTeamA1G2 = new JLabel("New label");
 			    lblTeamA1G1.setHorizontalAlignment(SwingConstants.CENTER);			lblTeamA1G2.setHorizontalAlignment(SwingConstants.CENTER);
-			    lblTeamA1G1.setBounds(26, 246, 118, 14);      						lblTeamA1G2.setBounds(250, 274, 118, 14);
+			    lblTeamA1G1.setBounds(26, 218, 118, 14);      						lblTeamA1G2.setBounds(250, 246, 118, 14);
 			    lblTeamA1G1.setText(addTeams.teamA1);  				  				lblTeamA1G2.setText(addTeams.teamA1);
 			    contentPane.add(lblTeamA1G1); 				  						contentPane.add(lblTeamA1G2);
 	        
 			    JLabel lblTeamA2G1 = new JLabel("New label"); 						JLabel lblTeamA2G2 = new JLabel("New label");
 			    lblTeamA2G1.setHorizontalAlignment(SwingConstants.CENTER);			lblTeamA2G2.setHorizontalAlignment(SwingConstants.CENTER);
-			    lblTeamA2G1.setBounds(250, 246, 118, 14);     						lblTeamA2G2.setBounds(26, 302, 118, 14);
+			    lblTeamA2G1.setBounds(250, 218, 118, 14);     						lblTeamA2G2.setBounds(26, 274, 118, 14);
 			    lblTeamA2G1.setText(addTeams.teamA2);				  				lblTeamA2G2.setText(addTeams.teamA2);
 			    contentPane.add(lblTeamA2G1);                				    	contentPane.add(lblTeamA2G2);
 	        	        
 			    JLabel lblTeamA3G1 = new JLabel("New label"); 						JLabel lblTeamA3G2 = new JLabel("New label");
 			    lblTeamA3G1.setHorizontalAlignment(SwingConstants.CENTER);			lblTeamA3G2.setHorizontalAlignment(SwingConstants.CENTER);
-			    lblTeamA3G1.setBounds(26, 274, 118, 14);      						lblTeamA3G2.setBounds(250, 302, 118, 14);
+			    lblTeamA3G1.setBounds(26, 246, 118, 14);      						lblTeamA3G2.setBounds(250, 274, 118, 14);
 			    lblTeamA3G1.setText(addTeams.teamA3);  				  				lblTeamA3G2.setText(addTeams.teamA3);
 			    contentPane.add(lblTeamA3G1);                 						contentPane.add(lblTeamA3G2);
 	      
 			    JLabel lblTeamA2G3 = new JLabel((String) null);						JLabel lblTeamA2G4 = new JLabel((String) null);
 			    lblTeamA2G3.setHorizontalAlignment(SwingConstants.CENTER);			lblTeamA2G4.setHorizontalAlignment(SwingConstants.CENTER);
-			    lblTeamA2G3.setBounds(26, 330, 118, 14);							lblTeamA2G4.setBounds(250, 386, 118, 14);
+			    lblTeamA2G3.setBounds(26, 302, 118, 14);							lblTeamA2G4.setBounds(250, 358, 118, 14);
 			    lblTeamA2G3.setText(addTeams.teamA2);								lblTeamA2G4.setText(addTeams.teamA2);
 			    contentPane.add(lblTeamA2G3);										contentPane.add(lblTeamA2G4);
 			    if(Creator.rdbtnNo.isSelected()) { lblTeamA2G3.setVisible(false); } if(Creator.rdbtnNo.isSelected()) { lblTeamA2G4.setVisible(false);}
 			  
 			    JLabel lblTeamA3G3 = new JLabel((String) null);						JLabel lblTeamA3G4 = new JLabel((String) null);
 			    lblTeamA3G3.setHorizontalAlignment(SwingConstants.CENTER);			lblTeamA3G4.setHorizontalAlignment(SwingConstants.CENTER);
-			    lblTeamA3G3.setBounds(250, 358, 118, 14);							lblTeamA3G4.setBounds(26, 386, 118, 14);
+			    lblTeamA3G3.setBounds(250, 330, 118, 14);							lblTeamA3G4.setBounds(26, 358, 118, 14);
 			    lblTeamA3G3.setText(addTeams.teamA3);								lblTeamA3G4.setText(addTeams.teamA3);
 			    contentPane.add(lblTeamA3G3);										contentPane.add(lblTeamA3G4);
 			    if(Creator.rdbtnNo.isSelected()) { lblTeamA3G3.setVisible(false); } if(Creator.rdbtnNo.isSelected()) { lblTeamA3G4.setVisible(false);}
 			  
 			    JLabel lblTeamA1G3 = new JLabel((String) null);						JLabel lblTeamA1G4 = new JLabel((String) null);
 			    lblTeamA1G3.setHorizontalAlignment(SwingConstants.CENTER);			lblTeamA1G4.setHorizontalAlignment(SwingConstants.CENTER);
-			    lblTeamA1G3.setBounds(250, 330, 118, 14);							lblTeamA1G4.setBounds(26, 358, 118, 14);
+			    lblTeamA1G3.setBounds(250, 302, 118, 14);							lblTeamA1G4.setBounds(26, 330, 118, 14);
 			    lblTeamA1G3.setText(addTeams.teamA1); 								lblTeamA1G4.setText(addTeams.teamA1);
 			    contentPane.add(lblTeamA1G3);										contentPane.add(lblTeamA1G4);
 			    if(Creator.rdbtnNo.isSelected()) { lblTeamA1G3.setVisible(false); } if(Creator.rdbtnNo.isSelected()) { lblTeamA1G4.setVisible(false);}
 	      
 			    JButton btnGrpAG1 = new JButton("AddResult");
-			    btnGrpAG1.setBounds(378, 246, 89, 17);
+			    btnGrpAG1.setBounds(378, 218, 89, 17);
 			    btnGrpAG1.setFont(new Font("Tahoma", Font.BOLD, 10));
 			    contentPane.add(btnGrpAG1);
 			    btnGrpAG1.addActionListener(new ActionListener() {
@@ -650,7 +620,7 @@ public class Groups extends JFrame {
 	          
 			    JButton btnGrpAG2 = new JButton("AddResult");
 			    btnGrpAG2.setFont(new Font("Tahoma", Font.BOLD, 10));
-			    btnGrpAG2.setBounds(378, 274, 89, 17);
+			    btnGrpAG2.setBounds(378, 246, 89, 17);
 			    contentPane.add(btnGrpAG2);
 			    btnGrpAG2.addActionListener(new ActionListener() {
 	        	  public void actionPerformed(ActionEvent e) {
@@ -779,7 +749,7 @@ public class Groups extends JFrame {
 	     	  
 			    JButton btnGrpAG3 = new JButton("AddResult");
 			    btnGrpAG3.setFont(new Font("Tahoma", Font.BOLD, 10));
-			    btnGrpAG3.setBounds(378, 302, 89, 17);
+			    btnGrpAG3.setBounds(378, 274, 89, 17);
 			    contentPane.add(btnGrpAG3);
 			    btnGrpAG3.addActionListener(new ActionListener() {
 			     public void actionPerformed(ActionEvent e) {
@@ -908,7 +878,7 @@ public class Groups extends JFrame {
 		       });
 		
 			    btnGrpAG4.setFont(new Font("Tahoma", Font.BOLD, 10));		
-			    btnGrpAG4.setBounds(378, 330, 89, 17);
+			    btnGrpAG4.setBounds(378, 302, 89, 17);
 			    contentPane.add(btnGrpAG4);
 			    btnGrpAG4.addActionListener(new ActionListener() {
 		          	public void actionPerformed(ActionEvent e) {
@@ -1036,7 +1006,7 @@ public class Groups extends JFrame {
 		          });
 			  
 			    btnGrpAG5.setFont(new Font("Tahoma", Font.BOLD, 10));
-			    btnGrpAG5.setBounds(378, 358, 89, 17);
+			    btnGrpAG5.setBounds(378, 330, 89, 17);
 			    contentPane.add(btnGrpAG5);
 			    btnGrpAG5.addActionListener(new ActionListener() {
 		          	public void actionPerformed(ActionEvent e) {
@@ -1163,7 +1133,7 @@ public class Groups extends JFrame {
 		          });
 			  
 			    btnGrpAG6.setFont(new Font("Tahoma", Font.BOLD, 10));
-			    btnGrpAG6.setBounds(378, 386, 89, 17);
+			    btnGrpAG6.setBounds(378, 358, 89, 17);
 			    contentPane.add(btnGrpAG6);
 			    btnGrpAG6.addActionListener(new ActionListener() {
 		          	public void actionPerformed(ActionEvent e) {
@@ -1295,31 +1265,31 @@ public class Groups extends JFrame {
 			  JLabel lblPositionB = new JLabel("#");							JLabel lblTeamB = new JLabel("Team");
 			  lblPositionB.setHorizontalAlignment(SwingConstants.CENTER);		lblTeamB.setHorizontalAlignment(SwingConstants.CENTER);
 			  lblPositionB.setFont(new Font("Tahoma", Font.BOLD, 12));			lblTeamB.setFont(new Font("Tahoma", Font.BOLD, 12));
-			  lblPositionB.setBounds(569, 117, 29, 14);							lblTeamB.setBounds(608, 117, 71, 14);
+			  lblPositionB.setBounds(569, 89, 29, 14);							lblTeamB.setBounds(608, 89, 71, 14);
 			  contentPane.add(lblPositionB);									contentPane.add(lblTeamB);
 			  
 			  JLabel lblPB = new JLabel("P");									JLabel lblWB = new JLabel("W");
 			  lblPB.setHorizontalAlignment(SwingConstants.CENTER);				lblWB.setHorizontalAlignment(SwingConstants.CENTER);
 			  lblPB.setFont(new Font("Tahoma", Font.BOLD, 12));					lblWB.setFont(new Font("Tahoma", Font.BOLD, 12));
-			  lblPB.setBounds(731, 117, 29, 14);								lblWB.setBounds(764, 117, 29, 14);
+			  lblPB.setBounds(731, 89, 29, 14);								lblWB.setBounds(764, 89, 29, 14);
 			  contentPane.add(lblPB);											contentPane.add(lblWB);
 			  
 			  JLabel lblDB = new JLabel("D");									JLabel lblLB = new JLabel("L");
 			  lblDB.setHorizontalAlignment(SwingConstants.CENTER);				lblLB.setHorizontalAlignment(SwingConstants.CENTER);
 			  lblDB.setFont(new Font("Tahoma", Font.BOLD, 12));					lblLB.setFont(new Font("Tahoma", Font.BOLD, 12));
-			  lblDB.setBounds(797, 117, 29, 14);								lblLB.setBounds(830, 117, 29, 14);
+			  lblDB.setBounds(797, 89, 29, 14);								lblLB.setBounds(830, 89, 29, 14);
 			  contentPane.add(lblDB);											contentPane.add(lblLB);
 			  
 			  JLabel lblGfB = new JLabel("GF");									JLabel lblGaB = new JLabel("GA");
 			  lblGfB.setHorizontalAlignment(SwingConstants.CENTER);				lblGaB.setHorizontalAlignment(SwingConstants.CENTER);
 			  lblGfB.setFont(new Font("Tahoma", Font.BOLD, 12));				lblGaB.setFont(new Font("Tahoma", Font.BOLD, 12));
-			  lblGfB.setBounds(863, 117, 29, 14);								lblGaB.setBounds(896, 117, 29, 14);
+			  lblGfB.setBounds(863, 89, 29, 14);								lblGaB.setBounds(896, 89, 29, 14);
 			  contentPane.add(lblGfB);											contentPane.add(lblGaB);
 			  
 			  JLabel lblGdB = new JLabel("GD");									JLabel lblPtsB = new JLabel("PTS");
 			  lblGdB.setHorizontalAlignment(SwingConstants.CENTER);				lblPtsB.setHorizontalAlignment(SwingConstants.CENTER);
 			  lblGdB.setFont(new Font("Tahoma", Font.BOLD, 12));				lblPtsB.setFont(new Font("Tahoma", Font.BOLD, 12));
-			  lblGdB.setBounds(929, 117, 29, 14);								lblPtsB.setBounds(962, 117, 29, 14);
+			  lblGdB.setBounds(929, 89, 29, 14);								lblPtsB.setBounds(962, 89, 29, 14);
 			  contentPane.add(lblGdB);											contentPane.add(lblPtsB);
 			  
 			  JLabel lblPosition1GrpB = new JLabel("1");						JLabel lblPosition2GrpB = new JLabel("2");
@@ -1328,7 +1298,7 @@ public class Groups extends JFrame {
 			  lblPosition1GrpB.setForeground(Color.BLACK);						lblPosition2GrpB.setForeground(Color.BLACK);
 			  lblPosition1GrpB.setFont(new Font("Tahoma", Font.BOLD, 12));		lblPosition2GrpB.setFont(new Font("Tahoma", Font.BOLD, 12));
 			  lblPosition1GrpB.setBackground(new Color(0, 204, 102));			lblPosition2GrpB.setBackground(new Color(0, 204, 102));
-			  lblPosition1GrpB.setBounds(579, 142, 412, 20);					lblPosition2GrpB.setBounds(579, 160, 412, 20);
+			  lblPosition1GrpB.setBounds(579, 114, 412, 20);					lblPosition2GrpB.setBounds(579, 132, 412, 20);
 			  contentPane.add(lblPosition1GrpB);								contentPane.add(lblPosition2GrpB);
 			 
 			  JLabel lblPosition3GrpB = new JLabel("3");
@@ -1337,78 +1307,78 @@ public class Groups extends JFrame {
 			  lblPosition3GrpB.setForeground(Color.BLACK);
 			  lblPosition3GrpB.setFont(new Font("Tahoma", Font.BOLD, 12));
 			  lblPosition3GrpB.setBackground(Color.WHITE);
-			  lblPosition3GrpB.setBounds(579, 178, 412, 20);
+			  lblPosition3GrpB.setBounds(579, 150, 412, 20);
 			  contentPane.add(lblPosition3GrpB);
 			  
 		//REZULTATI B--------------------------------------------------------------------------------------------------------------------------------------- 
 			  JFormattedTextField resultB1G1 = new JFormattedTextField(formatter);		JFormattedTextField resultB1G2 = new JFormattedTextField(formatter);
 			  resultB1G1.setHorizontalAlignment(SwingConstants.CENTER);					resultB1G2.setHorizontalAlignment(SwingConstants.CENTER);
-			  resultB1G1.setBounds(718, 246, 23, 17);									resultB1G2.setBounds(751, 274, 23, 17);
+			  resultB1G1.setBounds(718, 218, 23, 17);									resultB1G2.setBounds(751, 246, 23, 17);
 			  contentPane.add(resultB1G1);												contentPane.add(resultB1G2);
 			  
 			  JFormattedTextField resultB2G1 = new JFormattedTextField(formatter);		JFormattedTextField resultB2G2 = new JFormattedTextField(formatter);
 			  resultB2G1.setHorizontalAlignment(SwingConstants.CENTER);					resultB2G2.setHorizontalAlignment(SwingConstants.CENTER);
-			  resultB2G1.setBounds(751, 246, 23, 17);									resultB2G2.setBounds(718, 302, 23, 17);
+			  resultB2G1.setBounds(751, 218, 23, 17);									resultB2G2.setBounds(718, 274, 23, 17);
 			  contentPane.add(resultB2G1);												contentPane.add(resultB2G2);
 			  
 			  JFormattedTextField resultB3G1 = new JFormattedTextField(formatter);		JFormattedTextField resultB3G2 = new JFormattedTextField(formatter);
 			  resultB3G1.setHorizontalAlignment(SwingConstants.CENTER);					resultB3G2.setHorizontalAlignment(SwingConstants.CENTER);
-			  resultB3G1.setBounds(718, 274, 23, 17);									resultB3G2.setBounds(751, 302, 23, 17);
+			  resultB3G1.setBounds(718, 246, 23, 17);									resultB3G2.setBounds(751, 274, 23, 17);
 			  contentPane.add(resultB3G1);												contentPane.add(resultB3G2);
 			  
 			  JFormattedTextField resultB2G3 = new JFormattedTextField(formatter);		JFormattedTextField resultB2G4 = new JFormattedTextField(formatter);
 			  resultB2G3.setHorizontalAlignment(SwingConstants.CENTER);					resultB2G4.setHorizontalAlignment(SwingConstants.CENTER);
-			  resultB2G3.setBounds(718, 330, 23, 17);									resultB2G4.setBounds(751, 386, 23, 17);
+			  resultB2G3.setBounds(718, 302, 23, 17);									resultB2G4.setBounds(751, 358, 23, 17);
 			  contentPane.add(resultB2G3);												contentPane.add(resultB2G4);
 			  if(Creator.rdbtnNo.isSelected()) { resultB2G3.setVisible(false); }        if(Creator.rdbtnNo.isSelected()) { resultB2G4.setVisible(false);}
 			  
 			  JFormattedTextField resultB3G3 = new JFormattedTextField(formatter);		JFormattedTextField resultB3G4 = new JFormattedTextField(formatter);
 			  resultB3G3.setHorizontalAlignment(SwingConstants.CENTER);					resultB3G4.setHorizontalAlignment(SwingConstants.CENTER);
-			  resultB3G3.setBounds(751, 358, 23, 17);									resultB3G4.setBounds(718, 386, 23, 17);
+			  resultB3G3.setBounds(751, 330, 23, 17);									resultB3G4.setBounds(718, 358, 23, 17);
 			  contentPane.add(resultB3G3);												contentPane.add(resultB3G4);
 			  if(Creator.rdbtnNo.isSelected()) { resultB3G3.setVisible(false); }        if(Creator.rdbtnNo.isSelected()) { resultB3G4.setVisible(false);}
 			  
 			  JFormattedTextField resultB1G3 = new JFormattedTextField(formatter);		JFormattedTextField resultB1G4 = new JFormattedTextField(formatter);
 			  resultB1G3.setHorizontalAlignment(SwingConstants.CENTER);					resultB1G4.setHorizontalAlignment(SwingConstants.CENTER);
-			  resultB1G3.setBounds(751, 330, 23, 17);									resultB1G4.setBounds(718, 358, 23, 17);
+			  resultB1G3.setBounds(751, 302, 23, 17);									resultB1G4.setBounds(718, 330, 23, 17);
 			  contentPane.add(resultB1G3);												contentPane.add(resultB1G4);
 			  if(Creator.rdbtnNo.isSelected()) { resultB1G3.setVisible(false); }        if(Creator.rdbtnNo.isSelected()) { resultB1G4.setVisible(false);}
 			  
 			  JLabel lblTeamB1G1 = new JLabel("New label"); 				JLabel lblTeamB1G2 = new JLabel("New label");
 			  lblTeamB1G1.setHorizontalAlignment(SwingConstants.CENTER);	lblTeamB1G2.setHorizontalAlignment(SwingConstants.CENTER);
-			  lblTeamB1G1.setBounds(569, 246, 118, 14);     				lblTeamB1G2.setBounds(828, 274, 118, 14);
+			  lblTeamB1G1.setBounds(569, 218, 118, 14);     				lblTeamB1G2.setBounds(828, 246, 118, 14);
 			  lblTeamB1G1.setText(addTeams.teamB1); 				  		lblTeamB1G2.setText(addTeams.teamB1);
 			  contentPane.add(lblTeamB1G1);				  					contentPane.add(lblTeamB1G2);
 	        
 			  JLabel lblTeamB2G2 = new JLabel("New label"); 				JLabel lblTeamB2G1 = new JLabel("New label");
 			  lblTeamB2G2.setHorizontalAlignment(SwingConstants.CENTER);	lblTeamB2G1.setHorizontalAlignment(SwingConstants.CENTER);
-			  lblTeamB2G2.setBounds(569, 302, 118, 14);     				lblTeamB2G1.setBounds(828, 246, 118, 14);
+			  lblTeamB2G2.setBounds(569, 274, 118, 14);     				lblTeamB2G1.setBounds(828, 218, 118, 14);
 			  lblTeamB2G2.setText(addTeams.teamB2);  				  		lblTeamB2G1.setText(addTeams.teamB2);
 			  contentPane.add(lblTeamB2G2);				  					contentPane.add(lblTeamB2G1);
 	        
 			  JLabel lblTeamB3G1 = new JLabel("New label"); 				JLabel lblTeamB3G2 = new JLabel("New label");
 			  lblTeamB3G1.setHorizontalAlignment(SwingConstants.CENTER);	lblTeamB3G2.setHorizontalAlignment(SwingConstants.CENTER);
-			  lblTeamB3G1.setBounds(569, 274, 118, 14);	  					lblTeamB3G2.setBounds(828, 302, 118, 14);
+			  lblTeamB3G1.setBounds(569, 246, 118, 14);	  					lblTeamB3G2.setBounds(828, 274, 118, 14);
 			  lblTeamB3G1.setText(addTeams.teamB3);  				  		lblTeamB3G2.setText(addTeams.teamB3);
 			  contentPane.add(lblTeamB3G1);				  					contentPane.add(lblTeamB3G2);
 			  
 			  JLabel lblTeamB1G3 = new JLabel((String) null);							JLabel lblTeamB1G4 = new JLabel((String) null);
 			  lblTeamB1G3.setHorizontalAlignment(SwingConstants.CENTER);				lblTeamB1G4.setHorizontalAlignment(SwingConstants.CENTER);
-			  lblTeamB1G3.setBounds(828, 330, 118, 14);									lblTeamB1G4.setBounds(569, 358, 118, 14);
+			  lblTeamB1G3.setBounds(828, 302, 118, 14);									lblTeamB1G4.setBounds(569, 330, 118, 14);
 			  lblTeamB1G3.setText(addTeams.teamB1); 									lblTeamB1G4.setText(addTeams.teamB1);
 			  contentPane.add(lblTeamB1G3);												contentPane.add(lblTeamB1G4);
 			  if(Creator.rdbtnNo.isSelected()) { lblTeamB1G3.setVisible(false); }       if(Creator.rdbtnNo.isSelected()) { lblTeamB1G4.setVisible(false);}
 			  
 			  JLabel lblTeamB2G3 = new JLabel((String) null);							JLabel lblTeamB2G4 = new JLabel((String) null);
 			  lblTeamB2G3.setHorizontalAlignment(SwingConstants.CENTER);				lblTeamB2G4.setHorizontalAlignment(SwingConstants.CENTER);
-			  lblTeamB2G3.setBounds(569, 330, 118, 14);									lblTeamB2G4.setBounds(828, 386, 118, 14);
+			  lblTeamB2G3.setBounds(569, 302, 118, 14);									lblTeamB2G4.setBounds(828, 358, 118, 14);
 			  lblTeamB2G3.setText(addTeams.teamB2);										lblTeamB2G4.setText(addTeams.teamB2);
 			  contentPane.add(lblTeamB2G3);												contentPane.add(lblTeamB2G4);
 			  if(Creator.rdbtnNo.isSelected()) { lblTeamB2G3.setVisible(false); }       if(Creator.rdbtnNo.isSelected()) { lblTeamB2G4.setVisible(false);}
 			  
 			  JLabel lblTeamB3G3 = new JLabel((String) null);							JLabel lblTeamB3G4 = new JLabel((String) null);
 			  lblTeamB3G3.setHorizontalAlignment(SwingConstants.CENTER);				lblTeamB3G4.setHorizontalAlignment(SwingConstants.CENTER);
-			  lblTeamB3G3.setBounds(828, 358, 118, 14);									lblTeamB3G4.setBounds(569, 386, 118, 14);
+			  lblTeamB3G3.setBounds(828, 330, 118, 14);									lblTeamB3G4.setBounds(569, 358, 118, 14);
 			  lblTeamB3G3.setText(addTeams.teamB3); 									lblTeamB3G4.setText(addTeams.teamB3);
 			  contentPane.add(lblTeamB3G3);												contentPane.add(lblTeamB3G4);
 			  if(Creator.rdbtnNo.isSelected()) { lblTeamB3G3.setVisible(false); }       if(Creator.rdbtnNo.isSelected()) { lblTeamB3G4.setVisible(false);}
@@ -1538,7 +1508,7 @@ public class Groups extends JFrame {
 			          	}
 			          });
 				  btnGrpBG1.setFont(new Font("Tahoma", Font.BOLD, 10));			
-				  btnGrpBG1.setBounds(964, 246, 89, 17);					
+				  btnGrpBG1.setBounds(964, 218, 89, 17);					
 				  contentPane.add(btnGrpBG1);								
 				  
 				  JButton btnGrpBG2 = new JButton("AddResult");
@@ -1666,7 +1636,7 @@ public class Groups extends JFrame {
 		        	  }
 		          });
 				  btnGrpBG2.setFont(new Font("Tahoma", Font.BOLD, 10));
-				  btnGrpBG2.setBounds(964, 274, 89, 17);
+				  btnGrpBG2.setBounds(964, 246, 89, 17);
 				  contentPane.add(btnGrpBG2);
 				  
 				  JButton btnGrpBG3 = new JButton("AddResult");
@@ -1794,7 +1764,7 @@ public class Groups extends JFrame {
 					  	}
 				  });
 				  btnGrpBG3.setFont(new Font("Tahoma", Font.BOLD, 10));
-				  btnGrpBG3.setBounds(964, 302, 89, 17);
+				  btnGrpBG3.setBounds(964, 274, 89, 17);
 				  contentPane.add(btnGrpBG3);
 				  
 				  btnGrpBG4.addActionListener(new ActionListener() {
@@ -1921,7 +1891,7 @@ public class Groups extends JFrame {
 			          	}
 			      });
 				  btnGrpBG4.setFont(new Font("Tahoma", Font.BOLD, 10));		
-				  btnGrpBG4.setBounds(964, 330, 89, 17);					
+				  btnGrpBG4.setBounds(964, 302, 89, 17);					
 				  contentPane.add(btnGrpBG4);								
 
 				  btnGrpBG5.addActionListener(new ActionListener() {
@@ -2048,7 +2018,7 @@ public class Groups extends JFrame {
 			          	}
 			      });
 				  btnGrpBG5.setFont(new Font("Tahoma", Font.BOLD, 10));
-				  btnGrpBG5.setBounds(964, 358, 89, 17);
+				  btnGrpBG5.setBounds(964, 330, 89, 17);
 				  contentPane.add(btnGrpBG5);
 				  
 				  btnGrpBG6.addActionListener(new ActionListener() {
@@ -2175,13 +2145,13 @@ public class Groups extends JFrame {
 			          	}
 			      });
 				  btnGrpBG6.setFont(new Font("Tahoma", Font.BOLD, 10));
-				  btnGrpBG6.setBounds(964, 386, 89, 17);
+				  btnGrpBG6.setBounds(964, 358, 89, 17);
 				  contentPane.add(btnGrpBG6);
 				  
 			//KnockOut button--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------	  
 				  JButton knockOut = new JButton("Knockout");
 				  knockOut.setFont(new Font("Tahoma", Font.BOLD, 13));
-				  knockOut.setBounds(500, 663, 111, 25);
+				  knockOut.setBounds(500, 635, 111, 25);
 				  knockOut.addActionListener(new ActionListener() {
 						public void actionPerformed(ActionEvent e) {
 							KnockOut6 s = new KnockOut6();
@@ -2209,7 +2179,7 @@ public class Groups extends JFrame {
 				  resetAG1.setForeground(Color.WHITE);
 				  resetAG1.setBackground(Color.WHITE);
 				  resetAG1.setIcon(new ImageIcon(photo));
-				  resetAG1.setBounds(477, 246, 25, 17);
+				  resetAG1.setBounds(477, 218, 25, 17);
 				  contentPane.add(resetAG1);
 				  
 				  JButton resetAG2 = new JButton("");
@@ -2227,7 +2197,7 @@ public class Groups extends JFrame {
 				  resetAG2.setForeground(Color.WHITE);
 				  resetAG2.setBackground(Color.WHITE);
 				  resetAG2.setIcon(new ImageIcon(photo));
-				  resetAG2.setBounds(477, 274, 25, 17);
+				  resetAG2.setBounds(477, 246, 25, 17);
 				  contentPane.add(resetAG2);
 				  
 				  JButton resetAG3 = new JButton("");
@@ -2245,7 +2215,7 @@ public class Groups extends JFrame {
 				  resetAG3.setForeground(Color.WHITE);
 				  resetAG3.setBackground(Color.WHITE);
 				  resetAG3.setIcon(new ImageIcon(photo));
-				  resetAG3.setBounds(477, 302, 25, 17);
+				  resetAG3.setBounds(477, 274, 25, 17);
 				  contentPane.add(resetAG3);
 				  
 				  resetAG4.addActionListener(new ActionListener() {
@@ -2262,7 +2232,7 @@ public class Groups extends JFrame {
 				  resetAG4.setForeground(Color.WHITE);
 				  resetAG4.setBackground(Color.WHITE);
 				  resetAG4.setIcon(new ImageIcon(photo));
-				  resetAG4.setBounds(477, 330, 25, 17);
+				  resetAG4.setBounds(477, 302, 25, 17);
 				  contentPane.add(resetAG4);
 				  
 				  resetAG5.addActionListener(new ActionListener() {
@@ -2279,7 +2249,7 @@ public class Groups extends JFrame {
 				  resetAG5.setForeground(Color.WHITE);
 				  resetAG5.setBackground(Color.WHITE);
 				  resetAG5.setIcon(new ImageIcon(photo));
-				  resetAG5.setBounds(477, 358, 25, 17);
+				  resetAG5.setBounds(477, 330, 25, 17);
 				  contentPane.add(resetAG5);
 				  
 				  resetAG6.addActionListener(new ActionListener() {
@@ -2296,7 +2266,7 @@ public class Groups extends JFrame {
 				  resetAG6.setForeground(Color.WHITE);
 				  resetAG6.setBackground(Color.WHITE);
 				  resetAG6.setIcon(new ImageIcon(photo));
-				  resetAG6.setBounds(477, 386, 25, 17);
+				  resetAG6.setBounds(477, 358, 25, 17);
 				  contentPane.add(resetAG6);
 				  
 				  JButton resetBG1 = new JButton("");
@@ -2314,7 +2284,7 @@ public class Groups extends JFrame {
 				  resetBG1.setForeground(Color.WHITE);
 				  resetBG1.setBackground(Color.WHITE);
 				  resetBG1.setIcon(new ImageIcon(photo));
-				  resetBG1.setBounds(1063, 246, 25, 17);
+				  resetBG1.setBounds(1063, 218, 25, 17);
 				  contentPane.add(resetBG1);
 				  
 				  JButton resetBG2 = new JButton("");
@@ -2332,7 +2302,7 @@ public class Groups extends JFrame {
 				  resetBG2.setForeground(Color.WHITE);
 				  resetBG2.setBackground(Color.WHITE);
 				  resetBG2.setIcon(new ImageIcon(photo));
-				  resetBG2.setBounds(1063, 274, 25, 17);
+				  resetBG2.setBounds(1063, 246, 25, 17);
 				  contentPane.add(resetBG2);
 				  
 				  JButton resetBG3 = new JButton("");
@@ -2350,7 +2320,7 @@ public class Groups extends JFrame {
 				  resetBG3.setForeground(Color.WHITE);
 				  resetBG3.setBackground(Color.WHITE);
 				  resetBG3.setIcon(new ImageIcon(photo));
-				  resetBG3.setBounds(1063, 302, 25, 17);
+				  resetBG3.setBounds(1063, 274, 25, 17);
 				  contentPane.add(resetBG3);
 				  
 				  resetBG4.addActionListener(new ActionListener() {
@@ -2367,7 +2337,7 @@ public class Groups extends JFrame {
 				  resetBG4.setForeground(Color.WHITE);
 				  resetBG4.setBackground(Color.WHITE);
 				  resetBG4.setIcon(new ImageIcon(photo));
-				  resetBG4.setBounds(1063, 330, 25, 17);
+				  resetBG4.setBounds(1063, 302, 25, 17);
 				  contentPane.add(resetBG4);
 				  
 				  resetBG5.addActionListener(new ActionListener() {
@@ -2384,7 +2354,7 @@ public class Groups extends JFrame {
 				  resetBG5.setForeground(Color.WHITE);
 				  resetBG5.setBackground(Color.WHITE);
 				  resetBG5.setIcon(new ImageIcon(photo));
-				  resetBG5.setBounds(1063, 358, 25, 17);
+				  resetBG5.setBounds(1063, 330, 25, 17);
 				  contentPane.add(resetBG5);
 				  
 				  resetBG6.addActionListener(new ActionListener() {
@@ -2401,13 +2371,13 @@ public class Groups extends JFrame {
 				  resetBG6.setForeground(Color.WHITE);
 				  resetBG6.setBackground(Color.WHITE);
 				  resetBG6.setIcon(new ImageIcon(photo));
-				  resetBG6.setBounds(1063, 386, 25, 17);
+				  resetBG6.setBounds(1063, 358, 25, 17);
 				  contentPane.add(resetBG6);
 				  
 		    //Tabela A playoff-----------------------------------------------------------------------------------------------------------------------------------------------------	  
 				  
 				  tabelaAPlayoff.setBackground(SystemColor.inactiveCaption);
-				  tabelaAPlayoff.setBounds(10, 414, 532, 186);
+				  tabelaAPlayoff.setBounds(10, 386, 532, 186);
 				  contentPane.add(tabelaAPlayoff);
 				  tabelaAPlayoff.setLayout(null);
 				  tabelaAPlayoff.setVisible(false);
@@ -2772,7 +2742,7 @@ public class Groups extends JFrame {
 				  
 				  tabelaBPlayoff.setBackground(SystemColor.inactiveCaption);
 				  tabelaBPlayoff.setLayout(null);
-				  tabelaBPlayoff.setBounds(569, 414, 532, 186);
+				  tabelaBPlayoff.setBounds(569, 386, 532, 186);
 				  contentPane.add(tabelaBPlayoff);
 				  tabelaBPlayoff.setVisible(false);
 				  
