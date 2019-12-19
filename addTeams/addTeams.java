@@ -1,38 +1,29 @@
-import java.awt.BorderLayout;
+
 import java.awt.EventQueue;
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.Collections;
-import java.util.Date;
 import java.util.List;
-import java.util.Random;
-
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.JTextField;
-import javax.swing.border.EmptyBorder;
 import javax.swing.event.DocumentEvent;
 import javax.swing.event.DocumentListener;
 import javax.swing.JLabel;
-import javax.swing.SwingConstants;
-import java.awt.Label;
 import java.awt.Font;
-import javax.swing.UIManager;
-import java.awt.GridBagLayout;
-import java.awt.GridBagConstraints;
-import java.awt.Insets;
 import javax.swing.JButton;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
+import java.awt.Color;
+
 
 public class addTeams extends JFrame {
 
 	private JPanel contentPane;
-	private JTextField txtTeam1;
-	private JTextField txtTeam2;
-	private JTextField txtTeam3;
-	private JTextField txtTeam4;
-	private JTextField txtTeam5;
+	static JTextField txtTeam1;
+	static JTextField txtTeam2;
+	static JTextField txtTeam3;
+	static JTextField txtTeam4;
+	static JTextField txtTeam5;
 	private JTextField txtTeam6;
 	private JTextField txtTeam7;
 	private JTextField txtTeam8;
@@ -72,47 +63,20 @@ public class addTeams extends JFrame {
 	 * Create the frame.
 	 */
 	public addTeams() {
+		setFont(new Font("Cambria", Font.BOLD, 13));
+		setBackground(new Color(240, 240, 240));
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setResizable(false);
 		setBounds(100, 100, 813, 663);
 		contentPane = new JPanel();
-		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
+		contentPane.setBorder(null);
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
-		
-		JLabel lblTourPlace = new JLabel();
-		lblTourPlace.setBounds(180, 46, 180, 25);
-		lblTourPlace.setFont(new Font("Times New Roman", Font.BOLD, 15));
-		lblTourPlace.setText(Creator.tourPlace.getText());
-		contentPane.add(lblTourPlace);
-		
-		JLabel lblTourName = new JLabel();
-		lblTourName.setHorizontalAlignment(SwingConstants.CENTER);
-		lblTourName.setBounds(253, 10, 180, 25);
-		lblTourName.setFont(new Font("Times New Roman", Font.BOLD, 18));
-		lblTourName.setText(Creator.tourName.getText());
-		contentPane.add(lblTourName);
-		
-		JLabel lblTourDate = new JLabel();
-		lblTourDate.setBounds(501, 46, 180, 25);
-		lblTourDate.setFont(new Font("Times New Roman", Font.BOLD, 15));
-		contentPane.add(lblTourDate);
-		lblTourDate.setText(Creator.dateTour);
-		
-		JLabel lblNewLabel = new JLabel("Place of tournament:");
-		lblNewLabel.setHorizontalAlignment(SwingConstants.CENTER);
-		lblNewLabel.setFont(new Font("Times New Roman", Font.BOLD, 15));
-		lblNewLabel.setBounds(10, 46, 180, 25);
-		contentPane.add(lblNewLabel);
-		
-		JLabel lblNewLabel_1 = new JLabel("Date:");
-		lblNewLabel_1.setFont(new Font("Times New Roman", Font.BOLD, 15));
-		lblNewLabel_1.setBounds(443, 46, 48, 25);
-		contentPane.add(lblNewLabel_1);
+		setTitle("Name of tournament: "+Creator.tourName.getText()+" "+" "+" "+" "+" "+" "+"Place of tournament: "+Creator.tourPlace.getText()+" "+" "+" "+" "+" "+" "+"Date: "+Creator.dateTour);
 						
 		JLabel lblTeam1 = new JLabel("Team 1");
 		lblTeam1.setFont(new Font("Times New Roman", Font.BOLD, 13));
-		lblTeam1.setBounds(10, 100, 55, 25);
+		lblTeam1.setBounds(10, 79, 55, 25);
 		lblTeam1.setVisible(false);
 		if(Creator.numTeamsValue>=5) {
 			lblTeam1.setVisible(true);
@@ -121,7 +85,7 @@ public class addTeams extends JFrame {
 		
 		JLabel lblTeam2 = new JLabel("Team 2");
 		lblTeam2.setFont(new Font("Times New Roman", Font.BOLD, 13));
-		lblTeam2.setBounds(10, 145, 55, 25);
+		lblTeam2.setBounds(10, 124, 55, 25);
 		lblTeam2.setVisible(false);
 		if(Creator.numTeamsValue>=5) {
 			lblTeam2.setVisible(true);
@@ -130,7 +94,7 @@ public class addTeams extends JFrame {
 		
 		JLabel lblTeam3 = new JLabel("Team 3");
 		lblTeam3.setFont(new Font("Times New Roman", Font.BOLD, 13));
-		lblTeam3.setBounds(10, 190, 55, 25);
+		lblTeam3.setBounds(10, 169, 55, 25);
 		lblTeam3.setVisible(false);
 		if(Creator.numTeamsValue>=5) {
 			lblTeam3.setVisible(true);
@@ -139,7 +103,7 @@ public class addTeams extends JFrame {
 		
 		JLabel lblTeam4 = new JLabel("Team 4");
 		lblTeam4.setFont(new Font("Times New Roman", Font.BOLD, 13));
-		lblTeam4.setBounds(10, 235, 55, 25);
+		lblTeam4.setBounds(10, 214, 55, 25);
 		lblTeam4.setVisible(false);
 		if(Creator.numTeamsValue>=5) {
 			lblTeam4.setVisible(true);
@@ -148,7 +112,7 @@ public class addTeams extends JFrame {
 		
 		JLabel lblTeam5 = new JLabel("Team 5");
 		lblTeam5.setFont(new Font("Times New Roman", Font.BOLD, 13));
-		lblTeam5.setBounds(10, 280, 55, 25);
+		lblTeam5.setBounds(10, 259, 55, 25);
 		lblTeam5.setVisible(false);
 		if(Creator.numTeamsValue>=5) {
 			lblTeam5.setVisible(true);
@@ -157,7 +121,7 @@ public class addTeams extends JFrame {
 		
 		JLabel lblTeam6 = new JLabel("Team 6");
 		lblTeam6.setFont(new Font("Times New Roman", Font.BOLD, 13));
-		lblTeam6.setBounds(10, 325, 55, 25);
+		lblTeam6.setBounds(10, 304, 55, 25);
 		lblTeam6.setVisible(false);
 		if(Creator.numTeamsValue>=6) {
 			lblTeam6.setVisible(true);
@@ -166,7 +130,7 @@ public class addTeams extends JFrame {
 		
 		JLabel lblTeam7 = new JLabel("Team 7");
 		lblTeam7.setFont(new Font("Times New Roman", Font.BOLD, 13));
-		lblTeam7.setBounds(10, 370, 55, 25);
+		lblTeam7.setBounds(10, 349, 55, 25);
 		lblTeam7.setVisible(false);
 		if(Creator.numTeamsValue>=7) {
 			lblTeam7.setVisible(true);
@@ -175,7 +139,7 @@ public class addTeams extends JFrame {
 		
 		JLabel lblTeam8 = new JLabel("Team 8");
 		lblTeam8.setFont(new Font("Times New Roman", Font.BOLD, 13));
-		lblTeam8.setBounds(10, 415, 55, 25);
+		lblTeam8.setBounds(10, 394, 55, 25);
 		lblTeam8.setVisible(false);
 		if(Creator.numTeamsValue>=8) {
 			lblTeam8.setVisible(true);
@@ -184,7 +148,7 @@ public class addTeams extends JFrame {
 		
 		JLabel lblTeam9 = new JLabel("Team 9");
 		lblTeam9.setFont(new Font("Times New Roman", Font.BOLD, 13));
-		lblTeam9.setBounds(10, 460, 55, 25);
+		lblTeam9.setBounds(10, 439, 55, 25);
 		lblTeam9.setVisible(false);
 		if(Creator.numTeamsValue>=9) {
 			lblTeam9.setVisible(true);
@@ -193,7 +157,7 @@ public class addTeams extends JFrame {
 		
 		JLabel lblTeam10 = new JLabel("Team 10");
 		lblTeam10.setFont(new Font("Times New Roman", Font.BOLD, 13));
-		lblTeam10.setBounds(10, 505, 55, 25);
+		lblTeam10.setBounds(10, 484, 55, 25);
 		lblTeam10.setVisible(false);
 		if(Creator.numTeamsValue>=10) {
 			lblTeam10.setVisible(true);
@@ -202,7 +166,7 @@ public class addTeams extends JFrame {
 		
 		JLabel lblTeam11 = new JLabel("Team 11");
 		lblTeam11.setFont(new Font("Times New Roman", Font.BOLD, 13));
-		lblTeam11.setBounds(10, 550, 55, 25);
+		lblTeam11.setBounds(10, 529, 55, 25);
 		lblTeam11.setVisible(false);
 		if(Creator.numTeamsValue>=11) {
 			lblTeam11.setVisible(true);
@@ -211,7 +175,7 @@ public class addTeams extends JFrame {
 		
 		txtTeam1 = new JTextField();
 		txtTeam1.setFont(new Font("Times New Roman", Font.PLAIN, 15));
-		txtTeam1.setBounds(93, 100, 180, 25);
+		txtTeam1.setBounds(93, 79, 180, 25);
 		contentPane.add(txtTeam1);
 		txtTeam1.setVisible(false);
 		if(Creator.numTeamsValue>=5) {
@@ -222,7 +186,7 @@ public class addTeams extends JFrame {
 		txtTeam2 = new JTextField();
 		txtTeam2.setFont(new Font("Times New Roman", Font.PLAIN, 15));
 		txtTeam2.setColumns(10);
-		txtTeam2.setBounds(93, 145, 180, 25);
+		txtTeam2.setBounds(93, 124, 180, 25);
 		txtTeam2.setVisible(false);
 		if(Creator.numTeamsValue>=5) {
 			txtTeam2.setVisible(true);
@@ -232,7 +196,7 @@ public class addTeams extends JFrame {
 		txtTeam3 = new JTextField();
 		txtTeam3.setFont(new Font("Times New Roman", Font.PLAIN, 15));
 		txtTeam3.setColumns(10);
-		txtTeam3.setBounds(93, 190, 180, 25);
+		txtTeam3.setBounds(93, 169, 180, 25);
 		txtTeam3.setVisible(false);
 		if(Creator.numTeamsValue>=5) {
 			txtTeam3.setVisible(true);
@@ -242,7 +206,7 @@ public class addTeams extends JFrame {
 		txtTeam4 = new JTextField();
 		txtTeam4.setFont(new Font("Times New Roman", Font.PLAIN, 15));
 		txtTeam4.setColumns(10);
-		txtTeam4.setBounds(93, 235, 180, 25);
+		txtTeam4.setBounds(93, 214, 180, 25);
 		txtTeam4.setVisible(false);
 		if(Creator.numTeamsValue>=5) {
 			txtTeam4.setVisible(true);
@@ -252,7 +216,7 @@ public class addTeams extends JFrame {
 		txtTeam5 = new JTextField();
 		txtTeam5.setFont(new Font("Times New Roman", Font.PLAIN, 15));
 		txtTeam5.setColumns(10);
-		txtTeam5.setBounds(93, 280, 180, 25);
+		txtTeam5.setBounds(93, 259, 180, 25);
 		txtTeam5.setVisible(false);
 		if(Creator.numTeamsValue>=5) {
 			txtTeam5.setVisible(true);
@@ -262,7 +226,7 @@ public class addTeams extends JFrame {
 		txtTeam6 = new JTextField();
 		txtTeam6.setFont(new Font("Times New Roman", Font.PLAIN, 15));
 		txtTeam6.setColumns(10);
-		txtTeam6.setBounds(93, 325, 180, 25);
+		txtTeam6.setBounds(93, 304, 180, 25);
 		txtTeam6.setVisible(false);
 		if(Creator.numTeamsValue>=6) {
 			txtTeam6.setVisible(true);
@@ -272,7 +236,7 @@ public class addTeams extends JFrame {
 		txtTeam7 = new JTextField();
 		txtTeam7.setFont(new Font("Times New Roman", Font.PLAIN, 15));
 		txtTeam7.setColumns(10);
-		txtTeam7.setBounds(93, 370, 180, 25);
+		txtTeam7.setBounds(93, 349, 180, 25);
 		txtTeam7.setVisible(false);
 		if(Creator.numTeamsValue>=7) {
 			txtTeam7.setVisible(true);
@@ -282,7 +246,7 @@ public class addTeams extends JFrame {
 		txtTeam8 = new JTextField();
 		txtTeam8.setFont(new Font("Times New Roman", Font.PLAIN, 15));
 		txtTeam8.setColumns(10);
-		txtTeam8.setBounds(93, 415, 180, 25);
+		txtTeam8.setBounds(93, 394, 180, 25);
 		txtTeam8.setVisible(false);
 		if(Creator.numTeamsValue>=8) {
 			txtTeam8.setVisible(true);
@@ -292,7 +256,7 @@ public class addTeams extends JFrame {
 		txtTeam9 = new JTextField();
 		txtTeam9.setFont(new Font("Times New Roman", Font.PLAIN, 15));
 		txtTeam9.setColumns(10);
-		txtTeam9.setBounds(93, 460, 180, 25);
+		txtTeam9.setBounds(93, 439, 180, 25);
 		txtTeam9.setVisible(false);
 		if(Creator.numTeamsValue>=9) {
 			txtTeam9.setVisible(true);
@@ -302,7 +266,7 @@ public class addTeams extends JFrame {
 		txtTeam10 = new JTextField();
 		txtTeam10.setFont(new Font("Times New Roman", Font.PLAIN, 15));
 		txtTeam10.setColumns(10);
-		txtTeam10.setBounds(93, 505, 180, 25);
+		txtTeam10.setBounds(93, 484, 180, 25);
 		txtTeam10.setVisible(false);
 		if(Creator.numTeamsValue>=10) {
 			txtTeam10.setVisible(true);
@@ -312,7 +276,7 @@ public class addTeams extends JFrame {
 		txtTeam11 = new JTextField();
 		txtTeam11.setFont(new Font("Times New Roman", Font.PLAIN, 15));
 		txtTeam11.setColumns(10);
-		txtTeam11.setBounds(93, 550, 180, 25);
+		txtTeam11.setBounds(93, 529, 180, 25);
 		txtTeam11.setVisible(false);
 		if(Creator.numTeamsValue>=11) {
 			txtTeam11.setVisible(true);
@@ -360,13 +324,13 @@ public class addTeams extends JFrame {
 			}
 		});
 		btnNext.setFont(new Font("Times New Roman", Font.PLAIN, 16));
-		btnNext.setBounds(645, 581, 104, 30);
+		btnNext.setBounds(644, 560, 104, 30);
 		btnNext.setEnabled(false);
 		contentPane.add(btnNext);
 		
 		JButton btnDraw = new JButton("Draw");
 		btnDraw.setFont(new Font("Times New Roman", Font.PLAIN, 16));
-		btnDraw.setBounds(501, 581, 104, 30);
+		btnDraw.setBounds(500, 560, 104, 30);
 		btnDraw.setEnabled(false);
 		if(Creator.numTeamsValue==5) {
 			btnDraw.setVisible(false);
@@ -375,80 +339,80 @@ public class addTeams extends JFrame {
 		
 		JLabel lblGroupA = new JLabel("Group A");
 		lblGroupA.setFont(new Font("Times New Roman", Font.BOLD, 14));
-		lblGroupA.setBounds(344, 81, 57, 25);
+		lblGroupA.setBounds(344, 60, 57, 25);
 		lblGroupA.setVisible(false);
 		contentPane.add(lblGroupA);
 		
 		JLabel lblGroupB = new JLabel("Group B");
 		lblGroupB.setFont(new Font("Times New Roman", Font.BOLD, 14));
-		lblGroupB.setBounds(583, 81, 57, 25);
+		lblGroupB.setBounds(583, 60, 57, 25);
 		lblGroupB.setVisible(false);
 		contentPane.add(lblGroupB);
 		
 		JLabel lblTeamA1 = new JLabel();
 		lblTeamA1.setText("New label");
 		lblTeamA1.setFont(new Font("Times New Roman", Font.PLAIN, 13));
-		lblTeamA1.setBounds(344, 110, 180, 25);
+		lblTeamA1.setBounds(344, 89, 180, 25);
 		lblTeamA1.setVisible(false);
 		contentPane.add(lblTeamA1);
 		
 		JLabel lblTeamA2 = new JLabel("New label");
 		lblTeamA2.setFont(new Font("Times New Roman", Font.PLAIN, 13));
-		lblTeamA2.setBounds(344, 140, 180, 25);
+		lblTeamA2.setBounds(344, 119, 180, 25);
 		lblTeamA2.setVisible(false);
-       	    	contentPane.add(lblTeamA2);
+        contentPane.add(lblTeamA2);
 		
 		JLabel lblTeamA3 = new JLabel("New label");
 		lblTeamA3.setFont(new Font("Times New Roman", Font.PLAIN, 13));
-		lblTeamA3.setBounds(344, 170, 180, 25);
+		lblTeamA3.setBounds(344, 149, 180, 25);
 		lblTeamA3.setVisible(false);
 		contentPane.add(lblTeamA3);
 		
 		JLabel lblTeamA4 = new JLabel("New label");
 		lblTeamA4.setFont(new Font("Times New Roman", Font.PLAIN, 13));
-		lblTeamA4.setBounds(344, 200, 180, 25);
+		lblTeamA4.setBounds(344, 179, 180, 25);
 		lblTeamA4.setVisible(false);
 		contentPane.add(lblTeamA4);
 		
 		JLabel lblTeamA5 = new JLabel("New label");
 		lblTeamA5.setFont(new Font("Times New Roman", Font.PLAIN, 13));
-		lblTeamA5.setBounds(344, 230, 180, 25);
+		lblTeamA5.setBounds(344, 209, 180, 25);
 		lblTeamA5.setVisible(false);
 		contentPane.add(lblTeamA5);
 		
 		JLabel lblTeamA6 = new JLabel("New label");
 		lblTeamA6.setFont(new Font("Times New Roman", Font.PLAIN, 13));
-		lblTeamA6.setBounds(344, 260, 180, 25);
+		lblTeamA6.setBounds(344, 239, 180, 25);
 		lblTeamA6.setVisible(false);
 		contentPane.add(lblTeamA6);
 		
 		JLabel lblTeamB1 = new JLabel("New label");
 		lblTeamB1.setFont(new Font("Times New Roman", Font.PLAIN, 13));
-		lblTeamB1.setBounds(583, 110, 180, 25);
+		lblTeamB1.setBounds(583, 89, 180, 25);
 		lblTeamB1.setVisible(false);
 		contentPane.add(lblTeamB1);
 		
 		JLabel lblTeamB2 = new JLabel("New label");
 		lblTeamB2.setFont(new Font("Times New Roman", Font.PLAIN, 13));
-		lblTeamB2.setBounds(583, 140, 180, 25);
+		lblTeamB2.setBounds(583, 119, 180, 25);
 		lblTeamB2.setVisible(false);
 		contentPane.add(lblTeamB2);
 		
 		JLabel lblTeamB3 = new JLabel("New label");
 		lblTeamB3.setFont(new Font("Times New Roman", Font.PLAIN, 13));
-		lblTeamB3.setBounds(583, 170, 180, 25);
+		lblTeamB3.setBounds(583, 149, 180, 25);
 		lblTeamB3.setVisible(false);
 		contentPane.add(lblTeamB3);
 		
 		JLabel lblTeamB4 = new JLabel("New label");
 		lblTeamB4.setFont(new Font("Times New Roman", Font.PLAIN, 13));
-		lblTeamB4.setBounds(583, 200, 180, 25);
+		lblTeamB4.setBounds(583, 179, 180, 25);
 		lblTeamB4.setVisible(false);
 		contentPane.add(lblTeamB4);
 		
 		JLabel lblTeamB5 = new JLabel("New label");
 		lblTeamB5.setFont(new Font("Times New Roman", Font.PLAIN, 13));
-		lblTeamB5.setBounds(583, 230, 180, 25);
+		lblTeamB5.setBounds(583, 209, 180, 25);
 		lblTeamB5.setVisible(false);
 		contentPane.add(lblTeamB5);
 		
@@ -663,6 +627,17 @@ public class addTeams extends JFrame {
 			        teamB4=String.valueOf(lblTeamB4.getText()); teamB5=String.valueOf(lblTeamB5.getText());
 			     }
 		        
+				txtTeam1.setEditable(false);
+				txtTeam2.setEditable(false);
+				txtTeam3.setEditable(false);
+				txtTeam4.setEditable(false);
+				txtTeam5.setEditable(false);
+				txtTeam6.setEditable(false);
+				txtTeam7.setEditable(false);
+				txtTeam8.setEditable(false);
+				txtTeam9.setEditable(false);
+				txtTeam10.setEditable(false);
+				txtTeam11.setEditable(false);
 		        		  
 		     }
 		});
