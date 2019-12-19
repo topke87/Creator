@@ -1,26 +1,14 @@
-import java.awt.BorderLayout;
-import java.awt.Component;
 import java.awt.EventQueue;
-
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
-import javax.swing.event.ChangeEvent;
-import javax.swing.event.ChangeListener;
 import javax.swing.event.DocumentEvent;
 import javax.swing.event.DocumentListener;
-import javax.swing.text.DateFormatter;
-import javax.swing.text.Document;
-import javax.swing.text.MaskFormatter;
 import javax.swing.text.NumberFormatter;
 import javax.swing.JLabel;
 import java.awt.Font;
-import java.awt.ItemSelectable;
-
 import javax.swing.SwingConstants;
-import javax.swing.AbstractButton;
 import javax.swing.ButtonGroup;
-import javax.swing.ButtonModel;
 import javax.swing.JButton;
 import javax.swing.JTextField;
 import javax.swing.JRadioButton;
@@ -34,21 +22,15 @@ import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
-
 import javax.swing.JFormattedTextField;
-import javax.swing.JComboBox;
-import javax.swing.JComponent;
 
-import java.awt.event.InputMethodListener;
-import java.awt.event.ItemEvent;
-import java.awt.event.ItemListener;
-import java.awt.event.InputMethodEvent;
-import java.beans.PropertyChangeListener;
-import java.beans.PropertyChangeEvent;
 
 public class Creator extends JFrame {
-
 	
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
 	private JPanel contentPane;
 	public static JTextField tourName;
 	public static JTextField tourPlace;
@@ -58,8 +40,9 @@ public class Creator extends JFrame {
 	public static int numTeamsValue;
 	public static String dateTour;
 	List<JTextField> list = new ArrayList<>();
-	
-	
+	public static JRadioButton rdbtnYes = new JRadioButton("Yes");
+	public static JRadioButton rdbtnNo= new JRadioButton("No");
+		
 	
 	  //Launch the application.
 	public static void main(String[] args) {
@@ -100,15 +83,16 @@ public class Creator extends JFrame {
 				s.setVisible(true);
 			}
 		});
+		
 		btnNext.setFont(new Font("Times New Roman", Font.PLAIN, 16));
 		btnNext.setBounds(368, 284, 104, 30);
 		contentPane.add(btnNext);
 		btnNext.setEnabled(false);
 		
-		JLabel lblNewLabel_1 = new JLabel("Tournament name");
-		lblNewLabel_1.setFont(new Font("Times New Roman", Font.BOLD, 15));
-		lblNewLabel_1.setBounds(10, 66, 135, 25);
-		contentPane.add(lblNewLabel_1);
+		JLabel lblTournamentName = new JLabel("Tournament name");
+		lblTournamentName.setFont(new Font("Times New Roman", Font.BOLD, 15));
+		lblTournamentName.setBounds(10, 66, 135, 25);
+		contentPane.add(lblTournamentName);
 		
 		JLabel lblTournamentPlace = new JLabel("Tournament place");
 		lblTournamentPlace.setFont(new Font("Times New Roman", Font.BOLD, 15));
@@ -144,20 +128,17 @@ public class Creator extends JFrame {
 				
 		DateFormat date = new SimpleDateFormat("dd/MMM/yyyy");
         JFormattedTextField tourDate = new JFormattedTextField(date);
-		//tourDate = new JFormattedTextField();
 		tourDate.setValue(new Date());
 		tourDate.setFont(new Font("Times New Roman", Font.PLAIN, 15));
 		tourDate.setBounds(187, 138, 180, 25);
 		contentPane.add(tourDate);
 		dateTour=String.valueOf(tourDate.getText());
-		
-		JRadioButton rdbtnYes = new JRadioButton("Yes");
+				
 		rdbtnYes.setFont(new Font("Times New Roman", Font.BOLD, 15));
 		rdbtnYes.setBounds(187, 214, 54, 25);
 		rdbtnYes.setEnabled(false);
 		contentPane.add(rdbtnYes);
-				
-		JRadioButton rdbtnNo = new JRadioButton("No");
+		
 		rdbtnNo.setFont(new Font("Times New Roman", Font.BOLD, 15));
 		rdbtnNo.setBounds(253, 214, 54, 25);
 		rdbtnNo.setEnabled(false);
@@ -197,6 +178,7 @@ public class Creator extends JFrame {
 					rdbtnNo.setEnabled(true);
 				}
 				else {
+					homeAway.clearSelection();
 					rdbtnYes.setEnabled(false);
 					rdbtnNo.setEnabled(false);
 			   }
@@ -207,12 +189,17 @@ public class Creator extends JFrame {
 	   list.add(tourPlace);
 	   list.add(numTeams);
 	   list.add(tourDate);
+	   
 	   //btnNext omoguciti da je aktivno
 	   DocumentListener listener = new DocumentListener() {
 		    @Override
-		    public void removeUpdate(DocumentEvent e) { changedUpdate(e);}
+		    public void removeUpdate(DocumentEvent e) { 
+		    	changedUpdate(e);
+		    }
 		    @Override
-		    public void insertUpdate(DocumentEvent e) { changedUpdate(e); }
+		    public void insertUpdate(DocumentEvent e) { 
+		    	changedUpdate(e);
+		    }
 
 		    @Override
 		    public void changedUpdate(DocumentEvent e) {
@@ -221,23 +208,60 @@ public class Creator extends JFrame {
 					number=Integer.parseInt(numTeams.getText());
 					} catch (Exception e2) {
 					// TODO: handle exception
-				}
+					  }
 		    	boolean canEnable = true;
 		        for (JTextField tf : list) {
 		            if (tf.getText().trim().isEmpty()) {
 		                canEnable = false;
+		                homeAway.clearSelection();
+		                btnNext.setEnabled(canEnable);
 		            }
+		            
 		        }
+		        
 		        if(number==6 || number==7  )  {
 					rdbtnYes.addActionListener(new ActionListener() {
 						public void actionPerformed(ActionEvent arg0) {
-							btnNext.setEnabled(true);
-						}
-						
+							boolean canEnable = true;
+							
+							for (JTextField tf : list) {
+					            if (tf.getText().trim().isEmpty() ) {
+					                canEnable = false;
+					                btnNext.setEnabled(canEnable);
+					                homeAway.clearSelection();
+					            }
+					            else {
+					            	btnNext.setEnabled(canEnable);
+					            }
+					        }
+					    }
 					});
 					 rdbtnNo.addActionListener(new ActionListener() {
 							public void actionPerformed(ActionEvent arg0) {
-								btnNext.setEnabled(true);
+								boolean canEnable = true;
+																
+						        for (JTextField tf : list) {
+						            if (tf.getText().trim().isEmpty() ) {
+						                canEnable = false;
+						                btnNext.setEnabled(canEnable);
+						                homeAway.clearSelection();
+						            }
+						            else {
+						            	btnNext.setEnabled(canEnable);
+						            }
+						        }
+						        Groups.btnGrpAG4.setVisible(false);
+								Groups.btnGrpAG5.setVisible(false);
+								Groups.btnGrpAG6.setVisible(false);
+								Groups.btnGrpBG4.setVisible(false);
+								Groups.btnGrpBG5.setVisible(false);
+								Groups.btnGrpBG6.setVisible(false);
+								Groups.resetAG4.setVisible(false);
+								Groups.resetAG5.setVisible(false);
+								Groups.resetAG6.setVisible(false);
+								Groups.resetBG4.setVisible(false);
+								Groups.resetBG5.setVisible(false);
+								Groups.resetBG6.setVisible(false);
 							}
 							
 						});
@@ -250,7 +274,7 @@ public class Creator extends JFrame {
 		};
 		for (JTextField tf : list) {
 		    tf.getDocument().addDocumentListener(listener);
+		    
 		}
-		
 	}
 }
